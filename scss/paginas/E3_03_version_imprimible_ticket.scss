@@ -1,0 +1,155 @@
+body.e3-03 {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+header.e3-03 {
+    width: 100%;
+    max-width: 791px;
+    margin: 0 auto;
+    float: none;
+    background-image: url(../pago/img/e3-cielo.png);
+    background-repeat: no-repeat;
+    @include vendor-prefix(background-size, cover);
+    height: 215px;
+    margin-top: 55px;
+    padding: 2.2% 7.2%;
+    h2 {
+        @include text-properties($movistar-headline-reg, #FFFFFF, 36px, 120%, 400, null);
+        margin: 23px 0 0 5px;
+    }
+    h4 {
+        @include text-properties($roboto-light, #ffffff, 17px, 120%, 400, null);
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+}
+
+main.container.version-imprimible-ticket {
+    max-width: 791px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 55px 3.8%;
+    background-color: white;
+    p {
+        margin: 0;
+        padding: 0;
+        @include text-properties($roboto-light, #656D77, 13px, 24px, 300, null);
+    }
+    p strong {
+        font-family: $roboto-bold;
+    }
+    .cont-con-este-ticket {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 1px;
+        text-align: center;
+        @media #{$mobile} {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 17px;
+        }
+        p {
+            font-size: 17px;
+            @media #{$mobile} {
+                padding: 0 5px;
+                line-height: 18px;
+            }
+        }
+    }
+    h5.ojo-que-es-valido {
+        margin-top: 47px;
+        @include text-properties($roboto-bold, #005A83, 21.06px, 120%, 300, null);
+        @media #{$mobile} {
+            font-size: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+    .codigo {
+        width: 100%;
+        max-width: 388px;
+        height: auto;
+        background-color: #EBEFF5;
+        @include text-properties($roboto-light, #005B83, 36px, 120%, 400, null);
+        margin-top: 10px;
+        padding: 14px 0 14px 0;
+        span {}
+        @media #{$mobile} {
+            font-size: 20px;
+            margin-top: -6px;
+        }
+    }
+    .valido-hasta {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        @media #{$mobile} {}
+    }
+    .cont-totalapagar {
+        background-color: #F5F7F9;
+        @include size(285px, 118px);
+        float: none;
+        margin: 43px auto 0 auto;
+        padding: 13px 1% 0 1%;
+        @media #{$mobile} {
+            margin-top: 25px;
+            width: 100%;
+            max-width: 246px;
+            min-height: 85px;
+            height: 85px;
+            display: inline-block;
+        }
+        p.total-a-pagar {
+            @include text-properties($roboto, #595A6B, 14px, 120%, 400, null);
+            margin-bottom: 15px;
+            @media #{$mobile} {
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+        }
+        span.precio-a-pagar {
+            @include text-properties($roboto-light, #595A6B, 36px, 120%, 300, null);
+            margin-bottom: 5px;
+            margin-left: -2px;
+            @media #{$mobile} {
+                font-size: 28.87px;
+            }
+            strong {
+                @include text-properties($roboto, #595A6B, 14px, 120%, 400, null);
+                margin-left: -4px;
+                margin-right: 10px;
+                @media #{$mobile} {
+                    display: none;
+                }
+            }
+        }
+    }
+    .cont-recuerda {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 0 6%;
+        margin-left: 1px;
+        text-align: center;
+        @media #{$mobile} {
+            text-align: left;
+            margin-top: 15px;
+        }
+        p {
+            @media #{$mobile} {
+                font-size: 14px;
+                padding: 0px 20px;
+            }
+        }
+    }
+    h5.esperamos {
+        margin-top: 48px;
+        @include text-properties($roboto-light, #8F8F9D, 21.06px, 120%, 300, null);
+        @media #{$mobile} {
+            font-size: 15px;
+            margin-top: 3.5px;
+            margin-bottom: 30px;
+        }
+    }
+}

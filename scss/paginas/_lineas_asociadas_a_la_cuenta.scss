@@ -1,0 +1,77 @@
+.lineas_asociadas_a_la_cuenta .caja-dialogo {
+    padding: 0px 9% 20px 0;
+    margin-bottom: 0;
+    border: none;
+    @include vendor-prefix(border-radius, 3px);
+    position: relative;
+    @media #{$mobile} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    i.MCSS-cancel {
+        position: absolute;
+        top: 11px;
+        right: 11px;
+        font-size: 22px;
+        color: #8F8F9D;
+        &.close {
+            float: none !important;
+            text-shadow: 0;
+            opacity: 1 !important;
+        }
+    }
+    .cont-modal {
+        max-width: 282px;
+        width: 100%;
+        display: inline-block;
+        padding: 47px 0 0 0;
+        h4 {
+            @include text-properties($roboto-bold, #015D85, 17.22px, 120%, 700, null);
+            margin-bottom: 0;
+            display: inline-block;
+            margin-top: 8px;
+            width: 100%;
+            padding-left: 8px;
+            text-align: left;
+            @media #{$mobile} {
+                font-size: 16px;
+            }
+        }
+        .box-cuenta {
+            width: 100%;
+            display: inline-block;
+            background-color: #EBEFF5;
+            @include text-properties($roboto-light, #656C77, 16.53px, 120%, 300, null);
+            padding: 13px 10%;
+            margin-top: 22px;
+            text-align: left;
+        }
+        .cont-lineas {
+            text-align: left;
+            margin-top: 29px;
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                li {
+                    border-bottom: 1px dashed #CDD1D9;
+                    padding: 10px 0;
+                    i {
+                        color: #5B9BF9;
+                        font-size: 22px;
+                        text-align: left;
+                        position: relative;
+                        display: inline-block;
+                        left: -3px;
+                    }
+                    span {
+                        @include text-properties($roboto-light, #656D77, 13px, 120%, 300, null);
+                        display: inline-block;
+                        vertical-align: top;
+                        padding-left: 0px;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

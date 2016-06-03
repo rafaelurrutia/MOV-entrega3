@@ -1,0 +1,36 @@
+// MCSS
+// variables
+@import "structure/variables";
+@import "structure/_font-face";
+
+
+// utilidades
+@import "structure/utils";
+
+// mixins
+@import "structure/_mixins";
+
+
+//elementos
+@import "structure/biblioteca-elementos";
+
+// partes comunes
+
+@import "structure/header";
+@import "structure/footer";
+@import "structure/tablas";
+
+// formularios
+@import "structure/_forms";
+
+// plugins
+@import "plugins/_plugins";
+
+
+// paginas
+@import "pages/index";
+
+// PAGINAS PAGA CUENTA MOVIL
+// paginas
+@import "paginas/index";
+

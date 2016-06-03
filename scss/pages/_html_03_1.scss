@@ -1,0 +1,234 @@
+.onoffswitch {
+    position: relative; 
+    width: 48px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+    pointer-events: initial;
+     @media #{$desktop}{
+	     
+     }
+    @media #{$desktop-small, $tablet}{
+			margin-left: 42px
+	}
+   @media #{$mobile}{
+			margin-left: 14px;
+	}
+
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    height: 21px; 
+    padding: 0; 
+    line-height: 21px;
+    border: 2px solid #CDD2DB; 
+    border-radius: 21px;
+    background-color: #CDD2DB;
+    transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; 
+    width: 21px; 
+    margin: 0px;
+    background: #FFFFFF;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    right: 25px;
+    border: 2px solid #CDD2DB; 
+    border-radius: 21px;
+    transition: all 0.2s ease-out 0s; 
+    -webkit-transition: all 0.2s ease-out 0s; 
+ 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #A7CE37;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #A7CE37;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+
+.contenedor_productos_contratados{
+	
+	h5{
+		@include text-properties($roboto, $text-grey-5, 13px, 100%, bold, null);
+		margin-bottom: 24px;
+	}
+	
+	@media #{$desktop, $tablet}{
+		padding: 0px 20px;
+		.instrucciones{
+				text-align: center;
+			@media #{$mobile}{
+				text-align: left;
+			}
+		}
+		.banner-postorder {
+			p.corregido{
+			}
+			.carousel-caption{
+				top:-5px;
+			}
+			.precio {
+					position: relative;
+					top: -5px;
+			@media #{$desktop-small, $tablet}{
+						top:5px;
+					}
+			.btn-verde{
+				position: relative;
+				top: -10px;
+				@media #{$desktop-small, $tablet}{
+					top:-15px;
+				}
+			}
+			.link-simple{
+				position: relative;
+				top: -15px;
+			@media #{$desktop-small, $tablet}{
+				top:-25px;
+			}
+		}
+	}
+			.carousel-indicators{
+				bottom: 10px;
+				@media #{$desktop-small, $tablet}{
+					bottom:5px;
+				}
+			}
+		}
+}
+
+	.main_container_white{
+	@media #{$desktop, $tablet}{
+		padding: 0px 8px;
+		}
+	}
+
+.con-sidebar-left-arrow{ // SIDEBAR
+
+		#navbar i{
+			font-size: 19px;
+			margin-right: 18px;
+		}
+		#navbar li {
+			@media #{$desktop}{
+						margin-bottom: 95px;
+						opacity: 0.4;
+						filter: alpha(opacity=40); 
+					}
+			@media #{$tablet, $mobile}{
+				margin: 24px 10px;
+				opacity: 0.4;
+				filter: alpha(opacity=40); 
+			}
+
+			color: $text-grey-2;
+			a:link, a:visited, a:hover, a:active {
+			    color: $background-grey-9;
+			}
+		}
+		
+		#navbar li.active{
+			color: $text-grey-2;
+			opacity: 1;
+			filter: alpha(opacity=1); 
+		}
+// 		VERSION MOBIL
+		.left-content{
+			@media #{$desktop}{
+				padding-top: 33px;
+			}
+			.navbar-header {
+				.navbar-toggle{
+					margin: 0px;
+					padding-right: 0px;
+					span.caret{
+								color: #10628a;
+								float: left;
+								margin-right: 12px;
+								margin-top: 8px;
+							}
+					.inline-block{
+						float: left;
+						margin-right: 12px;
+							.icon-bar{
+								background-color: #10628a;
+							}
+							
+					}
+				}
+			}
+		}
+		
+		
+	} // SIDEBAR
+	
+	.fila_border_bottom{
+		
+		.relativo{
+			text-align: right;
+		}
+		margin-left: 42px;
+		padding: 30px 0;
+		border-bottom: 1px dotted $background-grey-9;
+		color: $text-grey-2;
+		
+		&:last-child{
+			margin-bottom: 48px;
+		}
+		@media #{$tablet}{
+						margin-left: 0px;
+						margin-right: -10px;
+					}
+		@media #{$mobile}{
+				margin-left: 0px;
+				margin-right: 10px;
+			}
+
+
+		.nombre_utilidad{
+			display: inline-block;
+			margin-bottom: 30px;
+			&:before{
+					content: "\e072";
+					font-family: 'Glyphicons Halflings';
+					font-size: .6em;
+					margin-right: 10px;
+					font-style: normal;
+					position: relative;
+					right: 0px;
+					top: 50%;
+					-webkit-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					-moz-transform: translateY(-50%);
+					-o-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+		}
+	
+		p{
+			text-align: left;
+			display: inline-block;
+			@media #{$mobile-y-tablet}{
+					pointer-events: none
+			}
+
+		}
+	}
+	
+}
+
+
+	

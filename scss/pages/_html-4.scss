@@ -1,0 +1,270 @@
+.tarifas{
+	color:  $text-grey-2;
+	&.form{
+			p{
+				font-family: $roboto-light;
+				color: $text-grey-2;
+			}
+	}
+	.panel-default{
+		border-radius: 2px;
+		box-shadow: none;
+		border-color:  $gris-detalle-1;
+		
+		.panel-heading{
+			background: $background-grey-1;
+
+			label{
+				color:  $text-grey-2;
+				font-size: 1.2em;
+				small{
+					display: block;
+					font-family: $roboto-light;
+				}
+			}
+		}
+		.panel-body{
+				padding: 15px 10px;  
+				@media #{$mobile} {
+					padding: 15px 12px;
+				}	
+
+			h5{
+				display: inline-block;
+				font-size: 1.2em;
+				vertical-align: middle;  
+				}
+			.promocion{						
+				@include ico-text( $verde-ic, 10px, 6px, 24px, 24px);
+			}	
+			.vermas{
+				border-left: 1px solid  $gris-detalle-1;
+				margin-top: 8px;
+				margin-left: 5%;
+				text-align: center;
+				padding-left: 10px;
+				width:90%;
+
+				a{
+					color:$text-grey-2;
+					font-size: 13px;
+					font-weight: bold;
+						
+					&:link{
+						text-decoration: none;
+					}
+					&:focus{
+						outline: none;
+					}
+				
+
+				.mostrar{
+					@media #{$mobile} {
+						padding: 15px 0;
+					}	
+				}
+			}
+				.oculto{
+					display:none;
+				}
+				
+			}
+		}
+	}
+		
+		ul{
+		    font-size: 0.9em;
+		    list-style: none;
+		    padding-left: 15px;
+
+		    &.list-inline{
+		    	li{
+		    		padding: 0 0 5px 0;
+		    		width: 30%;
+		    		&.caret-right{
+						padding-left: 18px;
+						&:before{
+							border-color: transparent $azul-5a;
+						    border-style: solid;
+						    border-width: 0.35em 0 0.35em 0.45em;
+						    content: "";
+						    display: block;
+						    height: 0;
+						    width: 0;
+						    left: -1em;
+						    top: 0.9em;
+						    position: relative;
+						}
+					}
+
+					&:last-child{
+						width: 38%;
+					}
+		    	}
+		    	
+			}
+		    li{
+				font-family: $roboto-light;
+				padding: 5px 0;
+		    }
+		}
+
+		.inicial{
+			li{
+				padding: 0;
+		  		&:before { 
+				    border-color: transparent $azul-5a;
+				    border-style: solid;
+				    border-width: 0.35em 0 0.35em 0.45em;
+				    content: "";
+				    display: block;
+				    height: 0;
+				    width: 0;
+				    left: -1em;
+				    top: 0.9em;
+				    position: relative;
+				}
+			}
+
+			p{
+				font-family: $roboto-light;
+				margin-left: 27px;
+			}
+		}
+		.preferido{
+			padding: 8px;
+			li{				
+				&:before { 
+				    top: 1.3em;
+				}
+			}
+		}
+		.btn-group .btn {
+    		width: 30%;
+    	}		
+    	.mail-list li{
+    		border-top: none; 
+
+       		&:last-child{
+				border-bottom: dashed 1px #cdd1da;
+				box-sizing: content-box;
+				padding-bottom: 15px;
+			}
+
+    		> div{
+    			width:70%;
+    		}
+    	}
+		.asignacion-usuario {
+			.cols-3-wrap {
+				justify-content: space-between;
+				@media #{$mobile} {
+					overflow: visible;
+					margin-bottom:40px;
+				}
+				.btn-group {
+					width:30%;
+
+					@media #{$mobile} {
+						width:100%;
+						margin-bottom: 26px;
+
+						.btn{
+							width: 42%;
+						}
+
+						.btn-movil{
+							float: right;
+						}
+					}
+				}
+				.carrier {
+					margin-top:-25px;
+				    width: 10%;
+				    @media #{$mobile} {
+						width:20%;
+					}
+				}
+				.carrier+div { 
+					margin-top:-25px;
+				    width: 57%;
+				    @media #{$mobile} {
+						width:80%;
+					}
+				}
+			}
+			label{
+				font-size: 0.92em;
+				margin-bottom: 24px;
+			}	
+		}
+		.radio-btn{
+			label{
+				&:before{
+					top:15px;
+				}
+			}
+		}
+		.no-line{
+			    line-height: 1%;
+    			margin-top: 14px;
+		}
+		strong, .text-bold {
+			font-family: $roboto;
+   		}
+
+		hr {
+			border-top: 1px solid $background-grey-4;
+			position: relative;
+			width: 95%;
+
+			&:after, &:before{
+				top: -1px;
+				left: 45%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				}
+
+			&:after{
+				border-top-color: white;
+				border-width: 16px;
+				margin-left: -10px;
+			}
+
+			&:before{
+				border-top-color: $background-grey-4;
+				border-width: 17px;
+				margin-left: -11px;
+			}
+		}
+
+}
+
+.caret{
+	border-width: 6px 6px 0 6px;
+	color: $background-grey-5;
+	display:block; 
+	margin: 0 auto;
+	margin-top: 5px;
+}
+.caret-up {
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid $background-grey-5;
+	display: block;
+	margin: 0 auto;
+	margin-top:6px;
+}
+.oculto{
+	display:none;
+}
+
+.navbar-toggle:not(.collapsed) .caret{
+	@include vendor-prefix(transform, rotate(180deg));
+	     
+}

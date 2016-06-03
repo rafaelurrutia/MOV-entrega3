@@ -1,0 +1,539 @@
+    .detalle-cuentas {
+        width: 100%;
+        display: inline-block;
+        padding: 0 17px 40px 17px;
+        text-align: center;
+        margin-bottom: 30px;
+        @media #{$mobile} {
+            background-color: #ecf0f6;
+            padding: 0 5%;
+            margin-top: -20px;
+            margin-bottom: 15px;
+        }
+        .cont-detalle-cuentas {
+            width: 100%;
+            max-width: 794px;
+            display: inline-block;
+            @media #{$mobile} {
+                background: white;
+                padding-left: 6%;
+                padding-right: 6%;
+                padding-bottom: 35px;
+            }
+            .cuenta-numero {
+                width: 85%;
+                display: table;
+                margin-top: 48px;
+                padding: 0;
+                @media #{$mobile} {
+                    display: inline-block;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                p {
+                    padding: 0;
+                    margin: 0;
+                    @include text-properties($roboto-light, #FFFFFF, 16.53px, 120%, 300, null);
+                    span {}
+                    strong {
+                        font-family: $roboto-bold;
+                    }
+                    @media #{$mobile} {
+                        font-size: 13px;
+                    }
+                }
+                .cuenta-n {
+                    width: 45%;
+                    display: table-cell;
+                    vertical-align: top;
+                    background-color: #119DBF;
+                    padding: 15px 0;
+                    @media #{$mobile} {
+                        display: block;
+                        width: 100%;
+                    }
+                    p {
+                        text-align: left;
+                        padding-left: 17%;
+                        @media #{$mobile} {
+                            text-align: center;
+                            padding-left: 0;
+                        }
+                    }
+                }
+                .tiene-activo {
+                    width: 55%;
+                    display: table-cell;
+                    vertical-align: top;
+                    position: relative;
+                    background-color: #00779F;
+                    padding: 15px 0;
+                    @media #{$mobile} {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        padding-left: 2%;
+                        padding-right: 2%;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 15px;
+                        left: -8px;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 9px 8px 9px 0;
+                        border-color: transparent #00779F transparent transparent;
+                        @media #{$mobile} {
+                            border: none;
+                        }
+                    }
+                }
+            }
+            .montos {
+                width: 100%;
+                margin-top: 25px;
+                @media #{$mobile} {
+                    margin-top: 20px;
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        min-height: 120px;
+                        @media #{$mobile} {
+                            min-height: 65px;
+                        }
+                        label {
+                            @include text-properties($roboto-light, #FFFFFF, 13px, 120%, 300, null);
+                            position: relative;
+                            top: 23px;
+                            @media #{$mobile} {
+                                font-size: 14px;
+                            }
+                        }
+                        label.disabled,
+                        span.disabled {
+                            @include text-properties($roboto-light, #CCD1D9, 13px, 120%, 300, null);
+                            @media #{$mobile} {
+                                font-size: 14px;
+                            }
+                        }
+                        input[type="checkbox"] {
+                            display: none;
+                        }
+                        input[type="checkbox"]+label {
+                            background: url('../pago/img/form-check-vencido.png') left center no-repeat;
+                            padding-left: 34px;
+                            padding-top: 2px;
+                            //width: 140px;
+                            height: 21.2px;
+                            background-size: 22px;
+                            @media #{$mobile} {
+                                padding-left: 29px;
+                                padding-top: -7px;
+                                height: 15px;
+                                background-size: 18px;
+                            }
+                        }
+                        input[type="checkbox"]:checked+label {
+                            background: url('../pago/img/form-check-checked-vencido.png') left center no-repeat;
+                            padding-left: 34px;
+                            padding-top: 2px;
+                            //width: 140px;
+                            height: 21.2px;
+                            background-size: 22px;
+                            @media #{$mobile} {
+                                padding-left: 29px;
+                                padding-top: -7px;
+                                height: 15px;
+                                background-size: 18px;
+                            }
+                        }
+                        input[type="checkbox"][disabled]+label {
+                            background: url('../pago/img/form-check-checked-disable.png') left center no-repeat;
+                            padding-left: 34px;
+                            padding-top: 2px;
+                            //width: 140px;
+                            height: 21.2px;
+                            background-size: 22px;
+                            @media #{$mobile} {
+                                padding-left: 29px;
+                                padding-top: -7px;
+                                height: 15px;
+                                background-size: 18px;
+                            }
+                        }
+                        &.vencido,
+                        &.por-pagar,
+                        &.seleccionado {
+                            position: relative;
+                            text-align: left;
+                            padding: 25px 4% 25px 17%;
+                            @media #{$mobile} {
+                                padding: 5px 4% 5px 17%;
+                                margin-bottom: 15px;
+                            }
+                            .cont-valores {
+                                display: inline-block;
+                                p {
+                                    position: relative;
+                                    top: -23px;
+                                }
+                                span {
+                                    display: block;
+                                    margin-bottom: 10px;
+                                    em {
+                                        font-style: normal;
+                                        font-size: 34px;
+                                        @media #{$mobile} {
+                                            font-size: 30px;
+                                        }
+                                        i {
+                                            font-style: normal;
+                                            font-size: 13px;
+                                            @media #{$mobile} {
+                                                font-size: 12px;
+                                            }
+                                        }
+                                    }
+                                    &.txt-1 {
+                                        padding-left: 3px;
+                                    }
+                                }
+                            }
+                            .no-estas-pagando {
+                                background-color: #5B9BF9;
+                                position: relative;
+                                display: inline-block;
+                                width: calc(100% - 310px);
+                                margin-left: 20px;
+                                position: relative;
+                                top: -17px;
+                                padding: 10px 1px 10px;
+                                z-index: 1;
+                                .no-estas-pagando-s1 {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 35px;
+                                    margin-top: 3px;
+                                    i {
+                                        font-size: 22px;
+                                        color: white;
+                                        padding-left: 6px;
+                                    }
+                                }
+                                .no-estas-pagando-s2 {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: calc(100% - 50px);
+                                    @include text-properties($roboto-light,
+                                    #FFFFFF,
+                                    13px,
+                                    120%,
+                                    300,
+                                    null);
+                                    text-align: left;
+                                }
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 15px;
+                                    left: -8px;
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 9px 8px 9px 0;
+                                    border-color: transparent #5B9BF9 transparent transparent;
+                                }
+                            }
+                        }
+                        &.vencido {
+                            border: 1px solid #D32929;
+                            border-left: 28px solid #D32929;
+                            background-color: #f25353;
+                            @media #{$mobile} {
+                                border-left-width: 20px;
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 66px;
+                                height: 66px;
+                                top: 23px;
+                                right: 60px;
+                                background: transparent url("../pago/img/img-vencido.png") no-repeat center right;
+                                background-repeat: no-repeat;
+                                background-size: 66px;
+                                @media #{$mobile} {
+                                    width: 34px;
+                                    height: 34px;
+                                    top: 14px;
+                                    right: 10px;
+                                    background-size: 34px;
+                                }
+                            }
+                            .cont-valores {
+                                label {
+                                    width: 140px;
+                                    @media #{$mobile} {
+                                        width: 185px;
+                                    }
+                                }
+                            }
+                        }
+                        &.por-pagar {
+                            border: 1px solid #D9DDE5;
+                            border-left: 28px solid #D9DDE5;
+                            background-color: #F5F7F9;
+                            @media #{$mobile} {
+                                border-left-width: 20px;
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 59px;
+                                height: 69px;
+                                top: 23px;
+                                right: 60px;
+                                background: transparent url("../pago/img/img-por-pagar.png") no-repeat center right;
+                                background-repeat: no-repeat;
+                                @media #{$mobile} {
+                                    width: 34px;
+                                    height: 34px;
+                                    top: 14px;
+                                    right: 10px;
+                                    background-size: 34px;
+                                }
+                            }
+                            .cont-valores {
+                                label {
+                                    color: #8F8F9D;
+                                    width: 140px;
+                                    @media #{$mobile} {
+                                        width: 185px;
+                                    }
+                                }
+                            }
+                        }
+                        &.seleccionado {
+                            border: 1px solid #c5ccd2;
+                            border-left: 28px solid #c5ccd2;
+                            background-color: #DCE4EB;
+                            @media #{$mobile} {
+                                border-left-width: 20px;
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 59px;
+                                height: 69px;
+                                top: 23px;
+                                right: 60px;
+                                background: transparent url("../pago/img/img-por-pagar.png") no-repeat center right;
+                                background-repeat: no-repeat;
+                            }
+                            .cont-valores {
+                                label {
+                                    color: #8F8F9D;
+                                    width: 270px;
+                                }
+                            }
+                            input[type="checkbox"]:checked+label {
+                                background: url('../pago/img/form-check-checked-seleccionado.png') left center no-repeat;
+                                padding-left: 34px;
+                                padding-top: 2px;
+                                //width: 140px;
+                                height: 21.2px;
+                                background-size: 22px;
+                                @media #{$mobile} {
+                                    border-left-width: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cont-link {
+                margin-top: 35px;
+                width: 100%;
+                text-align: right;
+                @media #{$mobile} {
+                    margin-top: 9px;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 15px;
+                    @include text-properties($roboto-bold,
+                    #5B9BF9,
+                    13px,
+                    120%,
+                    700,
+                    null);
+                    position: relative;
+                    text-align: right;
+                    @media #{$mobile} {
+                        font-size: 12px;
+                        word-spacing: -1px;
+                    }
+                    &:after {
+                        content: "";
+                        background: transparent url("../pago/img/icon-light-detalle.png") no-repeat center right;
+                        height: 15px;
+                        padding-right: 20px;
+                        @media #{$mobile} {
+                            height: 14px;
+                            padding-right: 10px;
+                            background-size: 10px;
+                        }
+                    }
+                }
+            }
+            .cont-total-a-pagar {
+                background: #F5F7F9;
+                display: inline-block;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 0;
+                padding: 12px 12.9% 14px 5%;
+                @media #{$mobile} {
+                    margin-top: 15px;
+                    padding: 12px 4% 14px 5%;
+                }
+                div.text-numero-venta-2 {
+                    p {
+                        margin: 5px 36px 0 0;
+                        text-align: right;
+                        @media #{$mobile} {
+                            text-align: left;
+                            margin: 5px 11px 0 0;
+                        }
+                        strong {
+                            @include text-properties($roboto-bold,
+                            #656D78,
+                            17px,
+                            100%,
+                            700,
+                            null);
+                            margin-bottom: 5px;
+                            @media #{$mobile} {
+                                font-size: 15.5px;
+                            }
+                        }
+                        span.fecha {
+                            @include text-properties($roboto-light,
+                            #656D78,
+                            17px,
+                            100%,
+                            300,
+                            null);
+                            text-align: right;
+                            margin-top: 5px;
+                            @media #{$mobile} {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    span.precio {
+                        @include text-properties($roboto-bold,
+                        #656D78,
+                        17px,
+                        100%,
+                        700,
+                        null);
+                        vertical-align: top;
+                        margin-top: 5px;
+                        @media #{$mobile} {
+                            font-size: 12px;
+                            float: right;
+                            margin-right: 8px;
+                        }
+                        strong {
+                            @include text-properties($roboto-bold,
+                            #656D78,
+                            35.51px,
+                            100%,
+                            700,
+                            null);
+                            margin-left: 4px;
+                            @media #{$mobile} {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                    .precio-m {
+                        display: none;
+                        @media #{$mobile} {
+                            display: inline-block;
+                        }
+                    }
+                    .precio-d {
+                        @media #{$mobile} {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .cont-btn {
+                margin-top: 28px;
+                display: inline-block;
+                width: 238px;
+                @media #{$mobile} {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                button {
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 46%;
+                        right: 26px;
+                        width: 5px;
+                        height: 7px;
+                        background-image: url("../pago/img/mobile/img-arrow-right-white.png");
+                    }
+                }
+            }
+        }
+    }
+    
+    body {
+        right: 0;
+        -webkit-transition: all 1s;
+        /* Safari */
+        transition: all 1s;
+        position: relative;
+        overflow-x: hidden;
+        -ms-overflow-x: hidden;
+    }
+     
+    .slide-panel {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 9999;
+        height: 100%;
+        width: 100%;
+        right: -100%;
+    }
+    
+    .opened-slide-panel {
+        body {
+            right: 100%;
+        }
+    }
+    
+    .ma5-menu-active {
+        .slide-panel {
+            display: none;
+        }
+    }
+    
+    .bt-slide-panel,
+    .bt-close-panel {
+        cursor: pointer;
+    }

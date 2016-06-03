@@ -1,0 +1,120 @@
+
+
+main aside {
+    #carrusel {
+        .carousel-indicators {
+            bottom: 0px;
+            li {
+                border-width: 3px;
+                height: 12px;
+                width: 12px;
+                &.active {
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+        .carousel-inner {
+            @media (max-width:767px) {
+                width: auto;
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+            .item {
+                &.active {
+                }
+                .carousel-caption {
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    padding-left: 30px;
+                    text-align: left;
+                    h2 {
+                        @include titulos(1.714em,160%,$text-white,$movistar-headline-bold,normal);
+                        margin-top: 5px;
+                    }
+                    p {
+                        width: 45%;
+                        @include parrafo-blanco-light;
+                        text-shadow: none;
+                    }
+                    button {
+                        @include boton-gordo(50px,#017b97,#fff,#47a4bb,normal);
+                        border-width: 2px;
+                    }
+                }
+                img {
+                    @media (max-width:991px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    >div+div {
+        overflow: hidden;
+        @media (max-width:767px) {
+            clear: both;
+            width: auto;
+            margin-left: -10px;
+            margin-right: -10px;
+            width: auto!important;
+            float: none!important;
+        }
+        >a {
+            display: block;
+            background: $azul-2a;
+            margin-bottom: 2px;
+            padding: 25px;
+            height: 129px;
+            @media (min-width:768px) and (max-width:992px) {
+                &:first-child+a~a {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 2px;
+                        height: 100%;
+                        background: #fff;
+                    }
+                }
+            }
+            &+a~a {
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 2px;
+                    height: 100%;
+                    background: #fff;
+                }
+            }
+            img, svg {
+                fill: #fff;
+                height: 50px;
+                width: 50px;
+                @include center-block;
+            }
+            p {
+                @include link-blanco;
+                margin-top: 18px;
+            }
+            &:hover {
+                text-decoration: none;
+                background: $azul-1a;
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px){}
+@media (min-width:768px){}
+@media (min-width:768px) and (max-width:991px){}
+@media (min-width:992px){}

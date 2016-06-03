@@ -1,0 +1,390 @@
+.detalle-plan{
+	.agregado{
+		i:first-child{
+			color: #aed244;
+			font-size: em(26);
+			display: inline-block;
+			padding-right: 10px;
+			vertical-align: middle;
+
+		}
+		.MCSS-trash{
+			font-size: em(26);
+			padding-top: 20px;
+			span{
+				font-size: 13px;
+				padding-left: 10px;
+				position: relative;
+				bottom: 3px;
+				vertical-align: middle;
+			}
+		}
+		&.price-btn{
+			width: 100%;
+		}
+		@media #{$tablet}{
+			&.price-btn{
+				padding-top: 40px;
+			}
+		}
+		@media #{$mobile-y-tablet}{
+			text-align: center;
+		}
+	}
+	.boton-masinfo{
+		@media #{$mobile}{
+			margin: 10px 0;
+			width: 100% !important;
+		}
+		@media #{$tablet}{
+			margin: 10px 0;
+		}
+	}
+	p.correcto{
+		color: $text-grey-2 !important;
+	}
+	.icos-plan{
+		@media #{$tablet}{
+			text-align: center;
+			padding-bottom: 20px;
+		}
+	}
+	.info-importante{
+		font-size: em(13);
+		margin: 48px 0 12px;
+		padding-top: 20px;
+		position: relative;
+		width: 100%;
+		i{
+			color: #fdb613;
+			font-size: em(26);
+			padding: 12px; 
+			vertical-align: middle;
+		    left: 2px;
+    		top: 7px;
+    		position: absolute;
+    		&.verde{
+    			color: #b1d34f;
+    		}
+		}
+		p{
+			padding-left: 48px;
+		}
+		ul li{
+			color: #525a65;
+			margin-left: 20px;
+		}
+		@media #{$mobile}{
+			margin-top: 16px;
+			padding-right: 10px;
+			i{
+				font-size: em(30);
+				left: 20px;
+				top: 13px;
+				padding-left: 4px;
+			}
+			p{
+				padding-left: 60px;
+			}
+			ul{
+				padding-left: 20px;
+			}
+		}
+	
+		@media #{$mobile-y-tablet} {
+			.col-sm-12{
+				padding-right: 0;
+			}
+		}
+		@media #{$tablet}{
+			i{
+				top: 13px;
+			}
+		}
+	}
+	.nuevo-plan{
+		background: #ffffff;
+		margin: 20px 0 40px;
+		padding: 48px 24px 12px;
+		@media #{$mobile} {
+			padding: 24px 10px 12px;
+		}
+
+	}
+	.precio-plan{
+		padding:  0;
+		position: relative;
+		small{
+			font-size: 13px;
+		}
+		.cucarda-verde:before{
+			border-color: transparent transparent transparent #ffffff;
+		}
+
+		.light-text{
+			color: $text-placeholder;
+			display: block;
+			padding-top: 7px;
+		}
+		&:before{
+			    content: "";
+			    border-left: 1px dotted #cccccc;
+			    height: 120px;
+			    position: absolute;
+			    width: 1px;
+			    top: 0px;
+			    left: -21%;
+			    @media #{$desktop-small}{
+			    	left: -15%;
+			    }
+
+		}
+		@media #{$tablet}{
+			border-top: 1px dashed #ccc;
+			padding-top: 10px;
+			.cucarda-verde{
+				top: 66px;
+			}
+			.light-text{
+				padding-top: 9px;
+			}
+			p.correcto{
+				padding-bottom: 0;
+			}
+			&:before{
+				border-left-width: 0;
+			}
+		}
+		@media #{$mobile}{
+			border-top: 1px dashed #ccc;
+			padding:30px 0;
+			&:before{
+				border-left-width: 0;
+				height: 0;
+			}
+			.cucarda-verde{
+				left: 0;
+				bottom: 50px;
+				font-size: 15px !important;
+				padding: 3px 2px 3px 8px;
+				position: absolute;
+			}
+			.thin-35{
+				padding-left: 40px;
+				font-size: 31px !important;
+			}
+		}
+		@media (max-width: 340px){
+			.thin-35{
+				padding-left: 90px;
+			}
+		}
+
+	}
+	.price-btn{
+		@media #{$desktop}{
+			float: right;
+			padding-top: 36px;
+			width: 83%;
+			p{
+				margin-bottom: 13px;
+			}
+		}
+		@media #{$desktop-small}{
+			width: 95%;
+		}
+		@media #{$tablet}{
+			padding-top: 28px;
+		}
+	}
+	
+	.prop-plan{
+		@include  text-properties($roboto, #656d78, em(13), 1.7, null, null);
+		display: inline-block;
+		min-width: 166px;
+		padding: 12px 0;
+		text-align: center;
+		&:first-child{
+			padding-left: 0;
+		}
+		i{
+			color: #a7ce37;
+		    font-size: em(28);
+		    display: block;
+		    padding: 12px;
+		    vertical-align: middle;
+
+		}
+		strong{
+			display: block;
+		}
+		@media #{$mobile}{
+			display: block;
+			padding: 5px 0 0;
+			text-align: left;
+			p, strong{
+				display: inline-block;
+				vertical-align: baseline;
+			}
+			i{
+				display: inline-block;
+				font-size: em(24);
+				padding: 4px 5px 4px 4px;
+			}
+			&:last-child{
+				padding-bottom: 20px;
+			}
+		}
+		@media #{$desktop-small}{
+			min-width: 135px;
+		}
+	}
+	.row{
+		margin: 0
+	}
+	.carac-plan{
+		background: #ffffff;
+		float:left;
+		display: table;
+		margin: 12px 0;
+		width: 49%;
+		&:nth-child(even){
+			float:right;
+		}
+		@media #{$mobile-y-tablet}{
+			display: block;
+			width: 100%;
+		}
+		.head{
+			display: table-cell;
+			background: #006699;
+			height: 144px;
+			text-align: center;
+			padding: 0 13px;
+			vertical-align: middle;
+			width: 166px;
+			@include vendor-prefix(box-sizing, border-box);
+			h3{
+				@include text-properties($roboto, #ffffff, em(17), 1.6, bold, null);
+				span{
+					display: block;
+					&.cifra{
+						font-family:$movistar-headline-bold;
+						font-size: 30px;
+						line-height: 1.2;
+					}
+				}
+			}
+			@media #{$mobile}{
+				height: 100px;
+				width: 120px;
+				h3{
+					font-size: em(16);
+					span{
+						display: inline-block;
+						&.cifra{
+							font-size: 20px;
+						}
+					}
+					
+				}
+			}
+			@media #{$tablet, $desktop-small} {
+				width: 180px !important;
+				h3 span.cifra{
+					font-size: 28px;
+				}
+			}
+		}
+		.carac-detalle{
+			background: #ffffff;
+			display:table-cell;
+			padding: 0 20px;
+			vertical-align: middle;
+			@include text-properties($roboto-light, $text-grey-2, em(13), 100%, null, null);
+			p{
+				margin-bottom: 2px;
+				line-height: 1.8;
+				strong{
+					font-family: $roboto;
+					font-weight: bold;
+				}
+			}
+			@media #{$desktop-large}{
+				padding-top: 30px;
+				vertical-align: top;
+			}
+			@media #{$mobile}{
+				padding:10px 10px 10px 20px;
+				p{
+					display: inline;
+				}
+			}
+		}
+	
+	}
+
+}
+.price-toggle{
+	.price{
+		display: none;
+	}
+	&.remove-plan{
+		.agregado{
+			display: none;
+		}
+		.price{
+			display: block;
+		}
+	}
+}
+.to-lowercase{
+	@media #{$mobile}{
+		text-transform: lowercase;
+	}
+}
+.align-comp{
+	padding-top: 8px;
+}
+.msje-plan{
+	padding: 24px 24px 24px 0;
+	@media #{$mobile}{
+		padding: 24px 6px 36px;
+	}
+	i{
+		color: #007197;
+        font-size: em(36);
+        padding-right: 10px;
+        @media #{$mobile} {
+        	font-size: em(30);
+        	position: relative;
+    		top: 2px;
+        }
+	}
+	
+	.boton-azul{
+		display: block;
+		margin-bottom: 12px;
+	
+	}
+	.cont-right{
+		margin-top: 20px;
+		text-align: center;
+		@media #{$no-mobile}{
+			margin-top: 0;
+			padding: 0;
+			float: right;
+		}
+		@media #{$tablet, $desktop-small}{
+			padding-top: 14px;
+		}
+	}
+	&.row{
+		margin: 0;
+	}
+	.alerta-success-v2{
+		text-align: left;
+		padding: 15px 0;
+	} 
+}
+

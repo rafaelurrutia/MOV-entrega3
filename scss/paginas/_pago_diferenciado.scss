@@ -1,0 +1,60 @@
+.pago_diferenciado .caja-dialogo {
+    padding: 0px 3% 25px 0;
+    @media #{$mobile} {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+    .cont-modal-pago_diferenciado {
+        max-width: 650px;
+        width: 100%;
+        display: inline-block;
+        padding: 47px 0 0 0;
+        h4 {
+            @include text-properties($roboto-bold, #015D85, 17.22px, 120%, 700, null);
+            margin-bottom: 0;
+            display: inline-block;
+            word-spacing: -1px;
+            margin-left: 22px;
+            margin-top: 14px;
+            @media #{$mobile} {
+                font-size: 16px;
+                text-align: center;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        .cont-border-bottom {
+            padding: 27px 0% 0 0;
+            margin-left: 14px;
+            p {
+                margin: 0;
+                padding: 0;
+                @include text-properties($roboto-light, #595A6B, 13px, 120%, 300, null);
+                @media #{$mobile} {
+                    font-size: 14px;
+            }
+            }
+        }
+        .link-simple-arrow-right {
+            margin-top: 5px;
+            display: block;
+        }
+        .close {
+            background: #005c84;
+        }
+        .btn-azul {
+            display: block;
+            margin: 40px auto 0 auto;
+            width: 220px;
+            @media #{$mobile} {
+                font-size: 14px;
+}
+            &.close {
+                float: none !important;
+                text-shadow: 0;
+                opacity: 1 !important;
+            }
+            
+        }
+    }
+}

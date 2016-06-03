@@ -1,0 +1,58 @@
+body.modal-open {
+    overflow: inherit;
+    padding-right: inherit !important;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-dialog {
+    z-index: 999999;
+}
+
+.modal-content {
+    background: transparent;
+    border: 0;
+    @include vendor-prefix(box-shadow, none);
+}
+
+.modal {
+    z-index: 9999;
+}
+
+.modal-dialog {
+    width: 100%;
+    @media #{$mobile} {
+        width: auto!important;
+    }
+}
+
+// pago_automatico
+.modal-dialog.pago_automatico {
+    max-width: 792px;
+}
+
+// no_dejar_de_pagar_vencida
+.modal-dialog.no_dejar_de_pagar_vencida {
+    max-width: 792px;
+}
+
+// desmarcar_servicios
+.modal-dialog.desmarcar_servicios {
+    max-width: 792px;
+}
+
+// pago_diferenciado
+.modal-dialog.pago_diferenciado {
+    max-width: 792px;
+}
+
+.modal-dialog.lineas_asociadas_a_la_cuenta {
+    max-width: 390px;
+}
+
+// detalle_de_servicios
+.modal-dialog.detalle_de_servicios {
+    max-width: 792px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg width="6.999999999999999" height="38" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <symbol viewBox="0 0 580 106" height="106px" width="580px" y="0px" x="0px" id="svg_2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+   <polygon points="580,0 0,0 289.666,106 " fill="#FFFFFF"/>
+  </symbol>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <use x="-237.000006" y="237.000003" transform="rotate(-90 3.465644598007206,18.96296310424805) matrix(0.06538952887058258,0,0,0.06538952887058258,0,0) " xlink:href="#svg_2" id="svg_3"/>
+ </g>
+</svg>

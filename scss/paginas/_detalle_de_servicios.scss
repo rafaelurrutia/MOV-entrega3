@@ -1,0 +1,270 @@
+.detalle_de_servicios .caja-dialogo {
+    padding-right: 0;
+    margin-bottom: 0;
+    padding-bottom: 35px;
+    border: none;
+    @include vendor-prefix(border-radius, 3px);
+    @media #{$mobile} {
+        // padding-left: 15px;
+        //    padding-right: 15px;
+    }
+    .cabecera {
+        position: relative;
+        background: #F5F7F9;
+        text-align: left;
+        padding: 15px 0 15px 23px;
+        word-spacing: 4px;
+        span {
+            @include text-properties($roboto-light, #656C77, 16.53px, 120%, 300, null);
+        }
+        i.MCSS-cancel {
+            position: absolute;
+            top: 13px;
+            right: 21px;
+            font-size: 21px;
+            color: #8F8F9D;
+            &.close {
+                float: none !important;
+                text-shadow: 0;
+                opacity: 1 !important;
+            }
+        }
+    }
+    .cont-modal {
+        max-width: 591px;
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        padding: 43px 0% 0px 1px;
+        //        padding: 47px 0 0 0;
+        @media #{$mobile} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        h4 {
+            @include text-properties($roboto-bold, #015D85, 20.78px, 120%, 700, null);
+            margin-bottom: 0;
+            display: inline-block;
+            margin-top: 8px;
+            width: 100%;
+            text-align: left;
+            @media #{$mobile} {
+                font-size: 16px;
+            }
+        }
+        p {
+            padding: 0;
+            margin: 8px 0 0 0;
+            @include text-properties($roboto-light, #525964, 13px, 120%, 300, null);
+            @media #{$mobile} {
+                font-size: 14px;
+            }
+        }
+        .importante {
+            width: 100%;
+            display: inline-block;
+            background-color: #F3F6F8;
+            @include text-properties($roboto-light, #656C77, 16.53px, 120%, 300, null);
+            padding: 7px 5% 42px 5%;
+            margin-top: 25px;
+            text-align: left;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                margin-left: -12px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 14px 12px 0 12px;
+                border-color: #F3F6F8 transparent transparent transparent;
+            }
+            .cont-alerta {
+                display: inline-block;
+                vertical-align: top;
+                width: 65px;
+                @media #{$mobile} {
+                    width: 30px;
+                }
+                i {
+                    font-size: 27px;
+                    position: relative;
+                    top: 23px;
+                    color: #FDB512;
+                    @media #{$mobile} {
+                        font-size: 24px;
+                    }
+                }
+            }
+            .cont-importante {
+                display: inline-block;
+                vertical-align: top;
+                width: calc(100% - 85px);
+                @media #{$mobile} {
+                    width: calc(100% - 40px);
+                }
+                h5 {
+                    padding: 0;
+                    margin: 0;
+                    @include text-properties($roboto-bold, #656C77, 17px, 120%, 700, null);
+                    @media #{$mobile} {
+                        font-size: 14px;
+                    }
+                }
+                p {
+                    @include text-properties($roboto-light, #656C77, 13px, 120%, 300, null);
+                    @media #{$mobile} {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .cont-servicios {
+            text-align: left;
+            max-width: 306px;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 23px;
+            padding: 0 2.52% 0 1.52%;
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                li {
+                    border-bottom: 1px dashed #CDD1D9;
+                    padding: 10px 0;
+                    label {
+                        @include text-properties($roboto-light, #656D77, 13px, 120%, 300, null);
+                        @media #{$mobile} {
+                            font-size: 14px;
+                        }
+                    }
+                    label.disabled,
+                    span.disabled {
+                        @include text-properties($roboto-light, #CCD1D9, 13px, 120%, 300, null);
+                        @media #{$mobile} {
+                            font-size: 14px;
+                        }
+                    }
+                    input[type="checkbox"] {
+                        display: none;
+                    }
+                    input[type="checkbox"]+label {
+                        background: url('../pago/img/form-check-vencido.png') left center no-repeat;
+                        padding-left: 34px;
+                        padding-top: 2px;
+                        width: 263px;
+                        height: 21.2px;
+                        background-size: 22px;
+                        @media #{$mobile} {
+                            width: 90%!important;
+                        }
+                    }
+                    input[type="checkbox"]:checked+label {
+                        background: url('../pago/img/form-check-checked-vencido.png') left center no-repeat;
+                        padding-left: 34px;
+                        padding-top: 2px;
+                        width: 263px;
+                        height: 21.2px;
+                        background-size: 22px;
+                        @media #{$mobile} {
+                            width: 90%!important;
+                        }
+                    }
+                    input[type="checkbox"][disabled]+label {
+                        background: url('../pago/img/form-check-checked-disable.png') left center no-repeat;
+                        padding-left: 34px;
+                        padding-top: 2px;
+                        width: 263px;
+                        height: 21.2px;
+                        background-size: 22px;
+                        @media #{$mobile} {
+                            width: 90%!important;
+                        }
+                    }
+                    span {
+                        @include text-properties($roboto-light,
+                        #656D77,
+                        13px,
+                        120%,
+                        300,
+                        null);
+                        display: inline-block;
+                        vertical-align: top;
+                        padding-left: 0px;
+                        padding-top: 2px;
+                    }
+                    &:last-child {
+                        border-bottom: 1px solid #8F8F9D;
+                    }
+                }
+                li:last-child {
+                    border-bottom: 1px solid #8F8F9D;
+                }
+            }
+            .monto-total {
+                padding-top: 9px;
+                border-top: 1px solid #8F8F9D;
+            }
+            span.txt-total {
+                @include text-properties($roboto-light,
+                #656C77,
+                17px,
+                120%,
+                300,
+                null);
+            }
+            span.txt-pagar {
+                @include text-properties($roboto-light,
+                #656C77,
+                17px,
+                120%,
+                300,
+                null);
+                float: right;
+            }
+            .confirmar-cambio {
+                @include text-properties($roboto-light,
+                #656D77,
+                13px,
+                24px,
+                300,
+                null);
+                background-color: #F3F5F9;
+                max-width: 285px;
+                text-align: center;
+                padding: 6px 13.4% 18px 13.4%;
+                margin-top: 30px;
+            }
+            button[disabled=disabled],
+            button:disabled {
+                @include text-properties($roboto-light,
+                #656D77,
+                13px,
+                24px,
+                300,
+                null);
+                background-color: #F3F5F9;
+                max-width: 285px;
+                text-align: center;
+                padding: 6px 13.4% 18px 13.4%;
+                margin-top: 30px;
+                height: auto;
+            }
+            button {
+                @include text-properties($roboto-light,
+                #FFFFFF,
+                13px,
+                24px,
+                300,
+                null);
+                max-width: 285px;
+                text-align: center;
+                padding: 6px 13.4% 18px 13.4%;
+                margin-top: 30px;
+                height: auto;
+            }
+        }
+    }
+}

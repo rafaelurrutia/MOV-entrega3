@@ -1,0 +1,126 @@
+.title-slide{
+	padding: 0;
+	@media #{$mobile-y-tablet}{
+		padding: 0 10px;
+	}
+	@media #{$desktop-small}{
+		padding: 0 10px;
+	}
+}
+.head-block-3{
+	background: $azul-2a;
+	display: table;
+	padding: 12px 0 12px 20px;
+	text-align: left;
+	width: 100%;
+	@media #{$mobile-y-tablet} {
+		padding: 12px 0 12px 10px;
+	}
+
+	h3{
+		@include text-properties($movistar-headline-reg, white, 24px, 120%, normal, null);
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+		width: calc(100% - 65px);
+		@media #{$mobile} {
+			@include text-properties($movistar-headline-reg, white, 24px, 120%, normal, null);
+			padding: 0 10px 0 0;
+			text-align: left;
+		}
+
+		span{
+			@include text-properties($movistar-headline-bold, white, 24px, 120%, normal, null);
+			@media #{$mobile} {
+				@include text-properties($movistar-headline-bold, white, 24px, 120%, normal, null);
+			}
+		}
+	}
+	.open-slide{
+		background: url("../images/slideUp.png") no-repeat center center;
+		border-left: 1px solid #2794ba;
+		display: table-cell;
+		float: none;
+		height: 48px;
+		margin: 12px 0px;
+		width: 64px;
+		&.close-slide{
+			background: url("../images/slideDown.png") no-repeat center center;
+		}
+		@media #{$mobile} {
+			width: 45px;
+		}
+	}	
+}
+.border-b-solid-gris{
+	border-bottom: 1px solid #cdd1da;
+	@media #{$mobile} {
+		margin: 0 10px;
+	}
+}
+.cucarda-2{
+	@include text-properties($movistar-headline-reg, white, em(16), 26px, normal, null);
+	@include size(141px, 26px);
+	@include bg-img('cucarda-2.png', left, top, no-repeat, transparent);
+	float: left;
+	padding-left: 20px;
+}
+.block-sugerencia{
+	border-bottom: 1px dashed #cdd1da;
+	border-top: 1px dashed #cdd1da;
+	display: table;
+	padding: 24px 0;
+	width: 100%;
+	@media #{$mobile} {
+		padding: 0;
+	}
+	&>div{
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+		@include text-properties($roboto-light, $text-grey-2, 13px, 120%, normal, null);
+		strong{
+			font-family: $roboto;
+			font-weight: bold;
+		}	
+
+		@media #{$mobile} {
+			display: table;
+			padding: 0;
+			margin: 15px 0;
+			width: 100%;
+		}
+	}
+}
+.content-slide{
+	display: none;
+	@media #{$mobile} {
+		&>p.correcto{
+			padding-left: 0;
+			padding-right: 0;
+			line-height: 140%!important;
+		}
+	}
+}
+.open-contentslide{
+	.boton-masinfo{
+		&:after{
+	  		transform: none;
+	  		top: 40%;
+		}
+	}
+	.boton-azul{
+		&:after{
+	  		transform: none;
+	  		top: 2%!important;
+		}
+	}
+}
+.banner{
+	@media #{$mobile} {
+		margin: 0 10px;
+	}
+}
+.padding-bottom-60 {
+    padding-bottom: 60px!important;
+}

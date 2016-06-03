@@ -1,0 +1,223 @@
+.variante_detalle_abonado_equipo{
+	.fondo{
+			border: 1px solid $border-grey-1;
+			padding-left: 10px;
+				@media #{$mobile, $tablet}{
+						padding-bottom: 24px;
+						padding-left: 0px;
+					}
+	}
+	
+	.fondo_flecha{
+		background: $background-grey-10;
+// 		@mixin flecha-h($color1,$color2,$width : 25px);
+		@include flecha-h($background-grey-10, $blanco,25px);
+		padding: 60px 10px 30px 0px;
+		height: 333px;
+			@media #{$desktop-small}{
+				height: 400px;
+			}
+			@media #{$mobile, $tablet}{
+				height: auto;
+				background: $background-grey-6;
+				padding: 32px 0px 54px 0px;
+				margin: 0px 10px 36px 10px;
+			
+				@include flecha-v($background-grey-6, $blanco,50px);
+				&:after{
+					bottom: 0px;
+					top:auto;
+					
+				}
+				&:before{
+					bottom: 0px;
+					top:auto;
+				}
+			}
+		
+		p.corregido{
+			padding-right: 36px;
+			@media #{$mobile}{
+				margin: 64px 0px 54px 42px;
+				padding-right: 28px;
+			}
+		}
+		
+		.link-simple{
+			@media #{$mobile}{
+				width: 255px;
+				display: block;
+				margin: 0 auto;
+				z-index: 10;
+				}
+		}
+	}	
+	
+	
+	.img-responsive{
+		@media #{$desktop}{
+					width: 70%;
+					margin-left: 20%;
+		}
+		@media #{$mobile-y-tablet}{
+					margin-left: 42px;
+					width: 60%;
+		}
+	}
+	
+	.bolder_text{
+			@include text-properties($roboto, $text-grey-2, em(13), 1, bold, null);
+			margin-bottom: 10px;
+				@media #{$mobile-y-tablet}{
+						margin-bottom: 24px;
+					
+					}
+		}
+		.instrucciones .col-md-10.col-xs-12{
+			@media #{$desktop}{
+					padding-left: 0px!important;
+					}
+		}
+		.contenedor_equipo{
+				margin-bottom: 26px;
+					@media #{$mobile-y-tablet}{
+						margin-top: 48px;
+						margin-left: 38px;
+						margin-right: 30px;
+					
+					}
+				p{
+					@media #{$mobile-y-tablet}{
+						margin-bottom: 24px;
+					
+					}
+				}
+		}
+		
+		
+.contenedor_alerta_tabla{
+		padding: 60px 48px 48px 24px;
+	@media #{$mobile, $tablet}{
+		padding: 0px;
+	}
+	.contenedor_alerta_parrafo{
+		margin-left: 8px;
+		@media #{$mobile-y-tablet}{
+				margin-left: 32px;
+				margin-right: 32px;
+		}
+		.alerta_amarilla{
+					margin:0px;
+					padding: 0px;
+					display:table;
+					background:none;
+			svg{
+					display: table-cell;
+					position:relative;
+					height: 25px;
+					width: 25px;
+					fill: #FDB613;
+					vertical-align: middle;
+					margin-right: 10px;
+				@media #{$mobile-y-tablet}{
+					height: 25px;
+					width: 25px;
+				}
+			}
+			.text-alert{
+				display:inline-block;
+				display: table-cell;
+		        text-align: left;
+		        vertical-align: middle;
+		        padding-top: 5px;
+			}
+			
+		}
+
+		p{
+			margin-left: 24px;
+		}
+		
+		.button_container{
+			text-align: center;
+			@media #{$mobile, $tablet}{
+								text-align: center;
+						}
+
+					.boton-azul-2a{
+						@media #{$desktop} {
+							background: $azul-2a;
+							width: 80%;
+							vertical-align: middle;
+							margin-top: 35px;
+						}
+					
+						@media #{$mobile, $tablet}{
+							height: 70px;
+							font-family: $roboto-bold;
+							font-size: 13px;
+							background: $azul-1d;
+							width:75%;
+							margin-bottom: 24px;
+						}
+					}
+		}
+		}
+	
+	.renovacion_equipo{
+			 border-top: 1px solid $border-grey-1;
+			@include text-properties($roboto, #5a5b6b, em(13), 1, bold, null);
+			padding: 18px 0px 0px 0px;
+			margin: 24px 32px 0px 32px;
+			
+/*
+			&:before {
+				  content : "";
+				  position: absolute;
+				  left    : 0;
+				  bottom  : 0;
+				  height  : 1px;
+				  width   : 80%; 
+				  border-top: 1px solid $border-grey-1;
+				  }
+*/
+
+			@media #{$mobile}{
+					border-top: none;			
+			}
+					
+			div{
+				padding: 0px;
+				div{
+					padding-bottom: 18px;
+				}
+			}
+			
+				.cuotas_pendientes{
+					@media #{$mobile}{
+						margin-bottom: 8px;
+					}
+				}
+				.monto_cuota{
+				}
+				
+					hr{
+						@media #{$mobile}{
+							background: $blanco;
+							border: 1px dashed $border-grey-1;
+						}
+					}
+
+			.btn-azul{
+				width: 255px;
+				margin: 0px;
+				@media #{$mobile, $tablet}{
+						width: 100%;
+						margin-bottom: 48px;
+					}
+			}
+
+		}
+	}
+	
+}

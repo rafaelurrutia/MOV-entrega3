@@ -1,0 +1,112 @@
+.container.comprobante-fallido {
+    max-width: 1200px;
+    div.contenido {
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+    }
+    .cont-comprobante-ticket {
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        background-color: #FFF;
+        width: 100%;
+        @media #{$mobile} {
+            padding: 0 5%;
+            background: #ecf0f6;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+            @include text-properties($roboto-light, #595A6B, 13px, 120%, 300, null);
+        }
+        strong {
+            font-family: $roboto-bold;
+        }
+    }
+}
+
+.caja-dialogo {
+    padding: 0px 3% 46px 0;
+    @media #{$mobile} {
+        padding-right: 1%;
+        padding-left: 1%;
+    }
+    .cont-modal-pago-automatico {
+        max-width: 417px;
+        width: 100%;
+        display: inline-block;
+        padding: 47px 0 0 0;
+        h4 {
+            @include text-properties($roboto-bold, #015D85, 17.22px, 120%, 700, null);
+            margin-bottom: 0;
+            display: inline-block;
+            word-spacing: -1px;
+            @media #{$mobile} {
+                font-size: 16px;
+                text-align: center;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        .cont-border-bottom {
+            padding: 31px 0% 40px 0;
+            margin-left: 24px;
+            @media #{$mobile} {
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            p {
+                margin: 0;
+                padding: 0;
+                @include text-properties($roboto-light, #595A6B, 13px, 120%, 300, null);
+                @media #{$mobile} {
+                    font-size: 14px;
+                    text-align: left;
+                }
+            }
+            strong {
+                font-family: $roboto-bold;
+            }
+            p.texto {
+                margin-top: 6px;
+                line-height: 23px;
+                @media #{$mobile} {
+                    margin-top: 15px;
+                }
+            }
+            a.link-simple-arrow-right {
+                margin-top: 32px;
+                display: block;
+                font-family: $roboto-bold;
+                font-size: 13px;
+                @media #{$mobile} {
+                    font-size: 14px;
+                }
+            }
+            .close {
+
+            }
+        }
+        .btn-verde {
+            display: inline-block;
+            margin-top: 25px;
+            @media #{$mobile} {
+                font-size: 14px;
+            }
+            &.close {
+                float: none !important;
+                text-shadow: 0;
+                opacity: 1 !important;
+            }
+        }
+        .borde-abajo {
+            border-bottom: 1px dashed #ccc;
+            height: 1px;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}

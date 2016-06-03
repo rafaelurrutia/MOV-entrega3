@@ -1,0 +1,149 @@
+.contenedor_comprobante_exitoso_config{
+	
+	.two-steps{
+		margin-bottom: 84px;
+		
+		div{
+			div{
+				ul{
+					li:first-child {
+						a {
+							border-left: 1px solid #ecf0f6;			
+						}
+					}
+				}
+			}
+		}
+	}
+	.mensaje{
+		padding: 0px 30px;
+		p.corregido{
+			span{
+				word-wrap: normal!important;
+				display: block;				
+			}
+		}
+	}
+	.boton-masinfo{
+		margin-bottom: 48px;
+/*
+				@media #{$tablet}{
+				width: 60%!important;
+			}
+*/
+/*
+				@media #{$desktop-small, $mobile}{
+				width: 100%!important;
+			}
+*/
+/* ----------- iPhone 4 and 4S Landscape ----------- */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	  	width:75%!important;
+  		margin-bottom: 0px;
+}
+
+/* ----------- iPhone 5 and 5S Landscape ----------- */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	  	width:75%!important;
+  		margin-bottom: 0px;
+}
+
+/* ----------- iPhone 6 Landscape ----------- */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+	  	width:75%!important;
+	  	margin-bottom: 0px;
+}
+
+/* ----------- iPhone 6+ Landscape ----------- */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+	  	width:75%!important;
+	  	margin-bottom: 0px;
+}
+		
+	}		
+	.notificacion-top-icon-success{
+		margin-bottom: 38px;
+	}
+}
+
+.contenedor_comprobante_exitoso_prepago{
+		.two-steps{
+		margin-bottom: 84px;
+				
+		div{
+			div{
+				ul{
+					li:first-child {
+						a {
+							border-left: 1px solid #ecf0f6;			
+						}
+					}
+				}
+			}
+		}
+	}
+	.mensaje{
+		padding: 0px 30px;
+	}
+	.boton-azul{
+		margin-top: 42px;
+
+	}
+	.boton-masinfo{
+		margin-bottom: 0px;
+				@media #{$tablet,$desktop-small, $mobile}{
+				width: 100%!important;
+			}
+
+	}		
+	.notificacion-top-icon-success{
+		margin-bottom: 38px;
+		padding-bottom: 48px;
+	}
+}
+.contenedor_comprobante_error{
+		margin-bottom: 48px;
+		
+		.grey-6-box{
+			background: $background-grey-6!important;
+			padding: 24px 0px;
+		}
+		p.corregido{
+			@media #{$tablet, $mobile}{
+				margin: 0;
+				@include text-properties($roboto-light, null, em(13), em(24),normal , null);
+			}
+			
+		}
+		
+		.notificacion-top-icon-error{
+			padding-bottom: 45px;
+		}
+		.boton-masinfo{
+			@media #{$tablet,$desktop-small, $mobile}{
+				width: 100%!important;
+			}
+		}
+		
+		.margin-bottom-18{
+			margin-top: 42px;
+		}
+			
+}

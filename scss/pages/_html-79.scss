@@ -1,0 +1,489 @@
+.head-block{
+	background: $azul-1a;
+	text-align: center;
+	position: relative;
+
+	h3{
+		@include text-properties($roboto-light, white, 21px, 72px, normal, null);
+
+		@media #{$mobile} {
+			@include text-properties($roboto-light, white, 18px, 120%, normal, null);
+
+			padding: 12px 0;
+		}
+
+		span{
+			@include text-properties($roboto-bold, white, 21px, 72px, normal, null);
+
+			@media #{$mobile} {
+				@include text-properties($roboto-bold, white, 18px, 120%, normal, null);
+			}
+		}
+
+
+	}
+
+	&:before{
+		content: ' ';
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+
+		
+		border-top: 10px solid $azul-1a;
+
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		margin-left: -5px;	
+	}
+
+	&.no-arrow:before{
+		display: none;
+	}
+}
+
+
+.consumo-facturado{
+
+	h4{
+		@include text-properties($roboto-light, $text-grey-2, 17px, null, normal, null);
+
+		span{
+			@include text-properties($roboto-bold, $text-grey-2, 17px, null, normal, null);
+		}
+	}
+
+	.data-row{
+		width: 100%;
+
+		@media #{$desktop} {
+			display:table;
+		}
+
+		@media #{$tablet} {
+			display:table;
+		}		
+
+		> div{
+
+			@media #{$desktop} {
+				display: table-cell;
+			}
+
+			@media #{$tablet} {
+				display: table-cell;
+			}
+			
+		}
+
+		.label-data{
+
+			@media #{$desktop} {
+				width: 185px;
+				vertical-align: middle;
+				padding-left: 30px;
+			}
+
+
+			@media #{$tablet} {
+				width: 185px;
+				vertical-align: middle;
+				padding-left: 30px;
+			}
+			
+			@media #{$mobile} {
+				margin-bottom: 15px;
+			}
+
+
+
+			@include ico-text($verde-3a);
+
+			svg{
+				@media #{$desktop} {
+					vertical-align: top;
+					margin-top: 5px;
+				}
+
+				@media #{$mobile} {
+					vertical-align: middle;
+				}
+			}
+
+			p{
+				@include text-properties($roboto-light,$azul-1a, 13px, 24px, normal, null);
+				display: inline-block;
+				//vertical-align: top;
+				margin: 0;
+
+				width: calc( 100% - 44px);
+
+				@media #{$mobile} {
+					@include text-properties($roboto-light,$azul-1a, 16px !important, 24px, normal, null);
+					
+
+				}
+
+
+				strong{
+					@include text-properties($roboto,$azul-1a, null, null, bold, null);
+				}
+			}
+		}// label -data
+
+		.box-grey{
+			padding: 24px;
+			background: $background-grey-3;
+			vertical-align: top;
+
+			@media #{$mobile} {
+				padding: 12px;
+
+				
+			}
+			&.margin-bottom-24{
+				@media #{$mobile} {
+					margin-bottom: 0;
+				}
+			}
+			.title{
+				@include text-properties($roboto-light,$azul-1a, 17px, auto, normal, null);
+				
+				strong{
+					@include text-properties($roboto,$azul-1a, 17px, auto, bold, null);
+				}
+
+				margin: 0;
+			}
+
+			.vigencia{
+				@include text-properties($roboto-light,$text-grey-2, 13px, null, normal, null);
+				display:block;
+			}
+
+
+
+		}// box -grey
+
+		.aviso{
+			@include ico-text($verde-3a);
+			border-top: 1px solid white;
+
+			/*@media #{$mobile} {
+				margin-top: 12px !important;
+				
+			}*/
+
+			svg{
+				vertical-align: top;
+				margin-top: 5px;
+			}
+
+			p{
+				width: calc(100% - 54px);
+				display: inline-block;
+				margin: 0;
+
+				strong{
+					@include text-properties($roboto !important,null, null, null, bold !important, null);
+				}
+			}
+		}// aviso
+
+		.box-white{
+			background: white;
+			vertical-align: top;
+		}
+	}// data-row
+
+	a.boton-masinfo{
+		line-height: 46px;
+	}
+
+
+	h3{
+		@include text-properties($roboto-bold,$text-grey-5, 21px, null, null, null);
+	}
+	
+
+	&.last-margin{
+		margin-bottom: 96px;
+
+		@media #{$mobile} {
+			margin-bottom: 48px;
+		}
+	}
+}// consumo-facturado
+
+
+
+.listaNumeros{
+	width: 100%;
+
+
+	@media #{$desktop-small} {
+		width: calc( 100% - 185px );
+		margin-left: 185px;
+	}	
+
+	dt{
+		@include text-properties($roboto-bold, $text-grey-2, 17px, auto, normal, null);
+	}
+
+	dd{
+		display:table;
+		width: 100%;
+		height: 24px;
+		padding: 12px 24px;
+
+
+		> div{
+			display: table-cell;
+			vertical-align: middle;
+			@include text-properties($roboto-light,$text-grey-2, 13px, null, normal, null);
+		}
+
+		div:last-child{
+			text-align: right;
+		}
+
+		.circle{
+			width: 24px;
+			height: 24px;
+
+			@include vendor-prefix(border-radius, 24px);
+
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+
+			&.color-100{
+				background-color: $azul-1a;
+			}
+
+			&.color-80{
+				background-color: rgba($azul-1a, .8)
+			}
+
+			&.color-60{
+				background-color: rgba($azul-1a, .6)
+			}
+
+			&.color-40{
+				background-color: rgba($azul-1a, .4)
+			}
+
+			&.color-20{
+				background-color: rgba($azul-1a, .2)
+			}
+
+		}
+
+		.text{
+			display:inline-block;
+			vertical-align: middle;
+			@include text-properties($roboto,#5a5b6b, 13px, auto, bold, null);
+		}
+
+
+	}
+}
+
+.sva{
+	display: table;
+	width: 100%;
+	height: 96px;
+
+	@media #{$mobile} {
+		display:block;
+		height: auto;
+		
+	}
+
+
+	> div{
+		display:table-cell;
+		vertical-align: middle;
+
+		width: 50%;
+		text-align: center;
+
+		@media #{$mobile} {
+			display:block;
+			width: 100%;
+			padding: 12px;
+
+			&:first-child{
+				text-align: left;
+			}
+		}
+
+	}
+
+	.left{
+		background: $azul-3a;
+		color: white;
+
+		@include ico-text(white, 20px, 6px, 51px, 48px);
+
+		span{
+			@include text-properties($roboto-bold,white, 21px, 48px, normal, null);
+
+			@media #{$mobile} {
+				@include text-properties($roboto-bold,white, 16px, 48px, normal, null);
+			}
+		}
+	}
+
+	.right{
+		background: $background-grey-3;
+
+		padding: 20px;
+
+		p{
+			@include text-properties($roboto-light, $azul-1a, 17px, null, normal, null);
+
+			@media #{$mobile} {
+				@include text-properties($roboto-light, $azul-1a, 16px, null, normal, null);
+
+				border-bottom: 1px solid white;
+				padding-bottom: 12px;
+				margin: 0;
+			}
+
+			strong{
+				@include text-properties($roboto, $azul-1a, 17px, null, bold, null);
+
+				@media #{$mobile} {
+					@include text-properties($roboto, $azul-1a, 16px, null, bold, null);
+				}
+			}
+		}
+
+		span{
+			@include text-properties($roboto, $text-grey-2, 13px, null, normal, null);
+
+			@media #{$mobile} {
+				display: inline-block;
+				padding-top: 12px;
+			}
+		}
+	}
+}
+
+.grafico-new{
+
+	> div{
+		width: 50%;
+		float:left;
+
+		@media #{$mobile} {
+			width: 100%;
+			float: none;
+
+			&:first-child{
+				text-align: center;
+				margin-bottom: 48px;
+			}
+
+
+		}
+	}
+	
+	ul{
+		padding: 0;
+
+		li{
+			width: 100%;
+			list-style: none;
+			padding-left: 26px;
+			position: relative;
+
+			.square{
+				width: 18px;
+				height: 18px;
+				display: block;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+
+			}
+
+			&:nth-child(1) .square{
+				background: #129dc0;
+			}
+
+			&:nth-child(2) .square{
+				background: #65bfd6;
+			}
+
+			&:nth-child(3) .square{
+				background: #b7e1ec;
+			}
+
+			.info{
+
+				p{
+					display:table;
+					width: 100%;
+					margin-bottom:4px;
+					span{
+						display: table-cell;
+						vertical-align: middle;
+
+						&:last-child{
+							text-align: right;
+						}
+					}
+
+					@include text-properties($roboto-light, $text-grey-5, 13px, null, normal, null);
+
+					&:first-child{
+						@include text-properties($roboto, $text-grey-5, 13px, null, bold, null);
+					}
+				}
+
+			}
+		}
+	}
+
+}
+
+.grafico-new-2{
+
+	@media #{$mobile} {
+		img{
+			width: 100%;
+		}		
+	}
+
+}
+
+.dos-botones-fix{
+
+	@media #{$desktop} {
+		.boton-masinfo{
+
+			min-width: 284px;
+
+			&:first-child{
+				margin-right: 44px;
+			}
+		}
+	}
+
+	@media #{$mobile} {
+		.boton-masinfo{
+
+			min-width: 100%;
+
+			&:first-child{
+				margin-bottom: 24px;
+			}
+		}		
+	}
+
+}

@@ -1,0 +1,413 @@
+
+.border-t-solid-gris{
+	border-top: 1px solid #cdd1da;
+	@media #{$mobile} {
+		margin: 0 10px;
+	}
+}
+
+
+.head-block-2{
+	background: $azul-1a;
+	text-align: center;
+	position: relative;
+
+	@media #{$mobile} {
+		padding: 0 12px;
+	}
+
+	h3{
+		@include text-properties($movistar-headline-reg, white, 21px, 72px, normal, null);
+
+		@media #{$mobile} {
+			@include text-properties($movistar-headline-reg, white, 24px, 120%, normal, null);
+
+			padding: 12px 0;
+		}
+
+		span{
+			@include text-properties($movistar-headline-bold, white, 21px, 72px, normal, null);
+
+			@media #{$mobile} {
+				@include text-properties($movistar-headline-bold, white, 24px, 120%, normal, null);
+			}
+		}
+	}
+
+	&.celeste{
+		background: $azul-2b;
+	}
+}
+
+.bajada-head-block{
+
+	@include size(100%, 48px);
+	transition: all 0.3s ease 0s;
+
+
+	display: table;
+
+	background: $azul-1b;
+	padding: 0 24px;
+
+	@media #{$mobile} {
+		@include size(100%, auto);
+		display: block;
+		padding: 12px;
+		
+	}
+
+	@media #{$tablet}{
+		height: 96px;
+	}
+
+	@media #{$desktop-small}{
+		height: 72px;
+	}
+
+	.cell{
+		display: table-cell;
+		vertical-align: middle;
+
+		
+		@media #{$desktop-small} {
+
+			&:first-child{
+				width: 70%
+			}
+			
+		}
+
+		@media #{$tablet} {
+
+			&:first-child{
+				width: 65%
+			}
+			
+		}
+
+		&:last-child{
+			text-align:right;
+		}
+
+		@media #{$mobile} {
+			display: block;	
+			padding: 0;
+		}
+
+		h4{
+			@include text-properties($roboto-bold, white, 17px, null, normal, null);
+			margin: 0;
+
+			@media #{$mobile} {
+
+				@include text-properties($roboto-bold, white, 18px, 24px, normal, null);
+				margin-bottom: 24px;
+			}
+		}
+
+		a{
+			display: inline-block;
+			@include text-properties($roboto, white, 13px, null, bold, null);
+
+			transition: none !important;
+
+			@media #{$mobile} {
+				text-align: right;
+				display:block;
+			}
+
+			&:after{
+				content: "\e080";
+				font-family: 'Glyphicons Halflings';
+				font-size: 10px;
+		  		margin-left: 5px;
+		  		font-style: normal;	
+				display: inline-block;
+				margin-left: 10px;
+			}
+
+
+		}
+	}
+
+	&.scroll-fix{
+		width: 100% !important;
+		z-index: 9999;
+		left: 0 !important;
+		@include size(100%, 84px);
+
+		a{
+			line-height: 46px;
+
+			&:hover{
+				background: #50869d;
+			}
+
+			@media #{$mobile}{
+				text-align:left;
+				max-width: 90%;
+				margin: 0 auto;
+			}
+
+		}
+
+		@media #{$mobile}{
+			height: auto;
+		}
+	}
+
+}
+
+.info-espera{
+	@include text-properties($roboto-light, $text-grey-2, 17px, 130%, normal, null);
+
+	@media #{$desktop} {
+		margin-top: 12px;
+	}
+
+	@media #{$mobile} {
+		@include text-properties($roboto-light, $text-grey-2, 18px, null, normal, null);
+
+		padding: 12px;
+
+		background: $background-grey-6;
+	}
+
+	strong{
+		@include text-properties($roboto-bold, $text-grey-2, 17px, null, normal, null);
+
+		@media #{$mobile} {
+			@include text-properties($roboto-bold, $text-grey-2, 18px, 120%, normal, null);
+		}
+	}
+}
+
+.grey-2{
+	color: $text-grey-2 !important; 
+}
+
+
+.masLlamados{
+
+	@media #{$mobile} {
+		padding:12px 12px 0 12px;
+	}
+
+	h5{
+		@include text-properties($roboto-bold, $text-grey-2, 17px, null, normal, null);
+	}
+
+
+	.item{
+
+		width: 20%;
+		float:left;
+
+		@media #{$mobile} {
+			width: 100%;
+			display: table;
+			float:none;
+		}
+
+		p{
+			display: inline-block;
+			margin: 0;
+
+			@media #{$mobile} {
+				display: table-cell;
+				vertical-align: middle;
+				height: 36px;
+			}
+
+			span{
+
+				@include text-properties($roboto-light, $text-grey-2, 13px, null, normal, null);
+
+				&.circle{
+					width: 12px;
+					height: 12px;
+					display: inline-block;
+					margin-right: 5px;
+
+					@include vendor-prefix(border-radius, 6px);
+				}
+
+			}
+
+			&:first-child{
+
+				margin-bottom: 6px;
+				span{
+					@include text-properties($roboto, $text-grey-2, 13px, null, bold, null);
+				}
+			}
+
+			&:last-child{
+				padding-left: 22px !important;
+
+				@media #{$mobile} {
+					text-align: right;
+				}
+			}
+		}
+
+		.color-100{
+			background-color: $azul-1a;
+		}
+
+		.color-80{
+			background-color: rgba($azul-1a, .8)
+		}
+
+		.color-60{
+			background-color: rgba($azul-1a, .6)
+		}
+
+		.color-40{
+			background-color: rgba($azul-1a, .4)
+		}
+
+		.color-20{
+			background-color: rgba($azul-1a, .2)
+		}
+
+	}
+}
+
+.comportamientoConsumo{
+
+	h2{
+		span{
+			@include text-properties($roboto-bold, $azul-1a, 21px, null, normal, null);
+			display: block;
+		}
+
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.descripcion{
+		padding: 0;
+
+		li{
+			@include text-properties($roboto-light, $text-grey-2, 17px, 48px, normal, null);
+			padding-left: 34px;
+			list-style: none;
+			height: 48px;
+			position: relative;
+
+			&:before{
+				content: '';
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -12px;
+
+				@include vendor-prefix(border-radius, 12px);
+
+			}
+
+			&:first-child{
+
+				&:before{
+					background: #a9cf38;
+				}
+			}
+			&:last-child{
+
+				&:before{
+					background: #e04857;
+				}
+			}
+
+		}
+	}
+
+	img{
+
+			width: 100%;
+		
+	}
+}
+
+
+.box-grey{
+
+	//width: 100%;
+
+	padding: 18px 10px;
+
+	&.beta{
+		padding: 18px 24px;
+
+		.title{
+			@include text-properties($roboto-light,$azul-1a, 17px, auto, normal, null);
+
+			text-align:left;
+			@media #{$mobile}{
+				text-align:center;
+			}
+			
+			strong{
+				@include text-properties($roboto,$azul-1a, 17px, auto, bold, null);
+			}
+
+			margin: 0;
+		}
+		
+	}
+
+	background: #f6f8fa;
+
+	@include ico-text($warning);
+
+	span{
+		@include text-properties($roboto-light, $text-grey-2, 13px, 140%, normal, null);
+
+		width: calc( 100% - 44px);
+
+		strong{
+			@include text-properties($roboto, $text-grey-2, 13px, 140%, bold, null);
+		}
+	}
+
+	&.big{
+		span{
+			@include text-properties($roboto-light, $text-grey-2, 15px, 140%, normal, null);
+
+			width: calc( 100% - 44px);
+
+
+
+			strong{
+				@include text-properties($roboto, $text-grey-2, 15px, 140%, bold, null);
+			}
+		}		
+	}
+
+
+}
+
+.aviso{
+	width: 100%;
+
+	padding: 18px 10px 0 10px;
+
+
+	@include ico-text(#5d9eff);
+
+	span{
+		@include text-properties($roboto-light, $text-grey-2, 13px, 140%, normal, null);
+
+		width: calc( 100% - 44px);
+	}	
+}
+
+
+.border-gris{
+	margin: 0 !important;
+	border-top: 1px solid #CDD1DA;
+}

@@ -1,0 +1,804 @@
+.contratados{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.texto-mobile{
+            display:none;
+            
+              @media #{$mobile} {
+					display: inline;
+                    }
+}
+
+.texto-desktop{ 
+            display:inline;
+
+              @media #{$mobile} {
+					display: none;
+                    }
+} 
+
+.steps-new{  
+	
+	//margin: 0 17px;
+	ul{
+		@include table(100%, 48px, middle);
+        padding: 0;
+        @media #{$no-mobile}{
+            border: 1px solid #ecf0f6;
+        }
+		
+		
+		li{
+			position: relative;
+				@media #{$mobile} { 
+						display: block;
+						float: none;
+						width: 100% !important;
+						border-radius: 3px;
+				}
+			a{
+				display: block;
+                text-decoration:none;
+				@include text-properties($roboto-light, #656d78, em(13), 100%,normal , null);
+				@media #{$mobile-y-tablet}{
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+				@media #{$mobile} {
+					@include text-properties($roboto-bold, #cdd1da, 20px, 100%,normal , null);
+					  padding-top: 15px;
+                      padding-bottom: 15px;
+					  text-align: left;  
+                      padding-left: 58px;
+					  font-size: 34px;  
+					  padding-left: 27px;
+					  font-weight: normal;
+					  color:#656d78;
+				}                                      
+				i{
+					content: ' ';
+					display: none;
+					@media #{$mobile} {
+                        &:before {
+                            border-left: 2px solid #c2d2db;
+                            padding: 3px 5px;
+                            position: relative;
+                            top: -13px;
+                            font-size: 32px;
+                        }
+                        font-family: "FontAwesome";
+                        display: inline;
+                        float: right;
+                        font-size: 1em;
+                        color: #c2d2db;
+                        margin-right: 0px;
+                        padding-left: 10px;
+                        padding-top: 5px;
+                        position: relative;
+                        top: -1px;
+                        height: 19px;
+                        overflow: hidden;
+					}
+				}
+				text-align: center;
+			}
+			&:last-child{
+				&:after{
+					display: none;
+				}
+			}
+
+			&:after{
+				content: ' ';
+				position: absolute;
+				right: 0;
+				bottom: 22px;
+				background: #cdd1da;
+				width: 1px;
+				height: 11px;
+				margin-bottom: -5.5px;
+				@media #{$mobile} {					
+					  content: '';
+					  background: transparent;
+					}
+			}
+
+			
+			&.active{
+				background: #5e9eff;
+				a{
+
+					@include text-properties($roboto, white, em(13), 100%,bold , null);
+
+
+					@media #{$mobile} {
+						@include text-properties($roboto, white, em(16), 100%,bold , null);
+
+
+					}
+					i{
+					content: ' ';
+					display: none;
+                    height:34px;
+                    overflow:hidden;
+					@media #{$mobile} {
+					    &:before {
+					        border-left: 2px solid white;
+                            padding-top: 3px;
+                            padding-bottom: 3px;
+                            padding-right: 5px;
+                            position: relative;
+                            top: -13px;
+                            padding-left: 5px;
+                            font-size:32px;
+					    }
+					  font-family: 'FontAwesome';
+					  display: inline;
+					  float: right;
+					  font-size: 1em;
+					  color: white;
+					  margin-right: 0;
+					  padding-left: 10px;
+					  padding-top: 5px;
+                      position: relative;
+                      top: -1px;
+                      height: 19px;
+
+
+					}
+				}
+
+				}
+				
+				&:after{
+					width: 0; 
+					height: 0; 
+					border-left: 6px solid white;
+					border-right: 6px solid white;					
+					border-top: 6px solid #5e9eff;
+					position: absolute;
+					bottom: 0px;
+					left: 50%;
+					margin-left: -3px;
+					display: block;
+				
+					@media #{$mobile} {
+						border-left: none;
+						border-right: none;
+					
+						border-top: none;
+					}
+				}
+			}
+
+			&:last-child{
+				&:after{
+// 					display: none;
+				}
+			}
+		}
+	}
+
+	&.pasos5{
+		li{
+			width: 20%;
+            &:hover{ 
+                background: #f7f7f9;
+            }
+            &.active{ 
+                &:hover{
+                    background: #5e9eff;
+                }
+            }
+		}
+
+	}
+    &.pasos3{
+        li{
+            width: 33.3%;
+            &:hover{ 
+                background: #f7f7f9;
+            }
+            &.active{ 
+                &:hover{
+                    background: #5e9eff;
+                }
+            }
+        }
+
+    }
+
+	ul{
+		li{
+
+			display: table-cell; 
+			@media #{$mobile} {
+				display: none;
+			}
+		}
+
+		li.active{
+			display: table-cell;
+			@media #{$mobile} {
+				display: block;
+			}
+		}
+	}
+
+	ul.mobile{
+	    border:none;
+        a{
+               font-size: 16px;
+               font-family: $roboto-light;
+        }
+     
+		li{
+			display: none;
+			@media #{$mobile} {
+				display: block;
+                border: 1px solid #D4D9E0;
+                margin-bottom: 10px;
+			}
+		}
+
+		li.active{
+			display: none;
+			@media #{$mobile} {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+.box-presupuesto{
+	.inner{
+		border: 1px solid #ecf0f6;
+		overflow: hidden;
+	}
+	i{
+		font-size: 37px;
+		font-style: normal;
+		color: #1f628b;
+		position: relative;
+		top: 12px;
+        @media #{$mobile} {
+
+        }
+
+	}
+}
+
+.box-prod-serv {
+	h4{
+	background: $azul-1b;
+	color: white;
+	margin: 0px;
+	padding: 24px;
+	text-align: center;
+	}
+
+}
+
+.box-info {
+    display:table;
+    > div {
+        display: table-cell;
+        vertical-align: middle;
+        height: 200px;
+
+
+    }
+
+	.inner{
+		border: 1px solid #ecf0f6;
+		overflow: hidden;
+	}
+	i{
+		font-size: 24px;
+		font-style: normal;
+		
+		color: $verde-ic;
+		position: relative;
+		top: 12px;
+
+	}
+
+    .box_info_titulo{
+    	background: $text-azul-1;
+    	color: white;
+    }
+    .box-info  .plan-detalle{
+    	margin: 24px!important;
+    }
+
+    .plan-precio{
+    	background: $azul-1b;
+    }
+
+    .plan-precio h3{
+    	color: white!important;
+
+    }
+}
+
+
+.table_plan_1_blue_v2 {
+    border:none;
+    background-color:#ECF0F6;
+    .fix-tarifa{
+        padding-right: 0px;
+    }
+    > div {
+        @media #{$mobile, $tablet} {
+            padding-left: 6%;
+            padding-right: 6%;
+            .col-table {
+
+                border-bottom-color: $blanco !important;
+                border-bottom-style: solid;
+                border-bottom-width:2px;
+                padding-bottom: 24px;
+            }
+        }
+
+    }
+
+    @media #{$mobile, $tablet} {
+        .info {
+            width: 100%;
+            p {
+                position: relative;
+                &:before {
+                    left: 2%;
+                    position: absolute;
+                    color: $azul-1a;
+                }
+                @media #{$mobile, $tablet} {
+                    color: $text-grey-2 ;
+                    b {
+                      color: $text-grey-2;
+                    }
+
+                }
+
+            }
+
+        }
+     }
+    @media #{$mobile} {
+        .info {
+            text-align: left;
+        }
+    }
+    .price {
+        i {
+            font-size:20px;
+            
+        }
+
+    }
+
+    > div > div {
+        margin-bottom: 0;
+        border-right: 1px solid $blanco !important;
+    }
+
+    h4 {
+        background-color:#5995AF;
+        color: $blanco;
+        span{
+            font-family: $roboto-bold;
+            line-height: 1.15;
+        }   
+    }
+    h5 {
+        font-weight: bold;
+        font-size: 13px;
+        font-weight: bold;
+        color: #656D78;
+        @media #{$mobile, $tablet} {
+            color: $text-grey-2 !important;
+        }
+        @media #{$mobile} {
+            padding-left: 35px;
+        }
+    }
+    em {
+        font-size: 36px;
+        font-style: normal;
+        font-family: MovistarHeadlineBold;
+    }
+
+    b { 
+        color: $text-grey-2;
+        font-weight: bold;
+        font-family:$roboto !important;
+    
+            margin-right: 32px;
+     
+        &:before {
+            font-family: "MCSS";
+            color: #A8CE38;
+            font-size: 24px;
+            padding-right: 7px;
+            position: relative;
+            top: 4px;
+            @media #{$mobile}{
+                padding-right: 12px;
+                float: left;
+            }
+        }
+    }
+    .col-3 {
+        border-right: 2px dashed #CCC;
+         @media #{$mobile, $tablet} {
+             border-bottom: 2px solid $blanco;
+
+        }
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+
+    }
+    .col-4 {
+
+        border: none !important;
+        position:relative;
+        @media #{$mobile, $tablet} {
+            &:before {
+                left: 0px;
+                background: transparent linear-gradient(to left bottom, transparent 50%, #5995AF 52.5%) repeat scroll 0% 0%;
+                width: 50%;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+                content: "";
+                @media #{$mobile, $tablet} {
+                    width: calc(50% + 20%) !important;
+                    margin-left: -12%;
+                 }
+            }
+            &:after {
+                left: 50%;
+                background: transparent linear-gradient(to right bottom, transparent 50%, #5995AF 52.5%) repeat scroll 0% 0%;
+                width: 50%;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+                content: "";
+                @media #{$mobile, $tablet} {
+                    width: calc(50% + 20%) !important;
+                    margin-right: -12%;
+                 }
+            }
+        }
+        @media #{$mobile, $tablet} {
+            padding-bottom: 20px;
+
+         }
+    }
+    .col-5 {
+        background-color: #5995AF !important;
+        min-height: 114px;
+        border: none !important;
+        @media #{$mobile, $tablet} {
+            padding-bottom: 10px;
+            width: calc(100% + 14%) !important;
+            margin-left: -7%;
+
+         }
+
+    }
+
+    ul {
+        list-style: none;
+        text-align: left;
+        padding: 0;
+        @media #{$mobile, $tablet} {
+            text-align: center;
+            li {
+                margin-bottom:5px;
+                p {
+                    display: inline-block;
+                    padding-left: 5px;
+                }
+
+            }
+
+            li:before {
+                font-size: 15px;
+                position: relative;
+                width: auto;
+                display: inline-block;
+            }
+
+        }
+    } 
+
+}
+
+.table_plan_1_blue_v2_a {
+    .col-5 {
+        @media #{$mobile, $tablet} {
+            padding-bottom: 20px !important; 
+         }
+    }
+    .col-3 {
+
+        @media #{$mobile, $tablet} {
+             border-bottom: 2px solid $blanco !important;
+         }
+    }
+    .col-4 {
+        background: none !important;
+        min-height: 0 !important;
+        margin-bottom:0;
+        border-right:0 !important;
+        p {
+            color: #656D78 !important;
+
+        }
+
+    }
+    .col-5 {
+        min-height: 113px; 
+         @media #{$desktop-small} { min-height: 128px !important; }
+    }
+
+    .col-table {
+        border-right: 1px solid $blanco !important;
+
+    }
+    @media #{$mobile}{
+        .col-xs-12, .col-md-9, .col-lg-9{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+
+}
+
+
+.table_plan_1_blue_v2_b {
+    h4 {
+        background-color: #B2CDDA !important;
+    }
+    .col-5 {
+        background-color: #ECF0F6 !important;
+        @media #{$mobile, $tablet} {
+            padding-bottom: 24px !important;
+         }
+    }
+    .col-table {
+        width: 25%;
+        @media #{$mobile, $tablet} {
+            width: 100%;
+         }
+    }
+    .col-3 {
+        @media #{$mobile, $tablet} {
+             border-bottom: 2px solid $blanco !important;
+         }
+    }
+
+
+    .col-4 {
+        @media #{$mobile, $tablet} {
+
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        padding-bottom: 20px !important;
+    }
+    .col-5 {
+        em {
+            font-family: $roboto-thin;
+            font-weight: normal;
+            color: #7C838D;
+        }
+        p {
+
+            color: #7C838D !important;
+        }
+    }
+
+}
+
+.table_plan_1_blue_v2_c {
+    h4 {
+        background-color: #015D85 !important;
+        font-family:  MovistarHeadlineBold;
+    }
+    .col-5 {
+        background-color: #015D85 !important;
+        @media #{$mobile, $tablet} {
+            width: calc(100% + 14%) !important;
+            margin-left: -7%;
+            padding-bottom: 20px !important;
+         }
+    }
+    .col-table {
+        width: 25%;
+        @media #{$mobile, $tablet} {
+            width: 100%;
+         }
+    }
+    .col-3  {
+        position:relative;
+        @media #{$mobile, $tablet} {
+
+            border-bottom: none !important;
+            &:before {
+                left: 0px;
+                background: transparent linear-gradient(to left bottom, transparent 50%, #015D85 52.5%) repeat scroll 0% 0% !important;
+                width: 50%;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+                content: "";
+                display: block;
+                @media #{$mobile, $tablet} {
+                    width: calc(50% + 14%) !important;
+                    margin-left: -7%;
+                 }
+            }
+            &:after {
+                left: 50%;
+                background: transparent linear-gradient(to right bottom, transparent 50%, #015D85 52.5%) repeat scroll 0% 0% !important;
+                width: 50%;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+                content: "";
+                display: block;
+                @media #{$mobile, $tablet} {
+                    width: calc(50% + 14%) !important;
+                    margin-left: -7%;
+                 }
+            }
+        }
+    }
+}
+
+#cart{
+    .cart-list-postorder{
+        padding-left: 0;
+        li{
+            background-color: #f6f8fa;
+            display: block;
+        }
+        .cart-item{
+            padding: 12px 18px 10px;
+            position: relative;
+            @media #{$mobile}{
+                &:after{
+                    border-bottom: dashed 1px #d0d4dd;
+                    display: block;
+                    padding-top: 20px;
+                }
+            }
+            .delete-cart{
+                color: #cdd1da;
+                position: absolute;
+                right: 8px;
+                text-decoration: none;
+                top: 20px;
+                width: 20px;
+                height: 20px;
+                display: block;
+                border-radius: 50%;
+                border:1px solid #cdd1da;
+            }
+            .cart-img{
+                float: left;
+                height: 88px;
+                overflow: hidden;
+                @media #{$mobile}{
+                    display: none;
+                }
+            }
+            .cart-name{
+                border-right: dotted 1px #ced2db;
+                float: left;
+                margin-top: 0px;
+                padding: 6px 13px;
+                width: 230px;
+                @media #{$mobile}{
+                    padding: 0;
+                    width: 50%;
+                }
+                *{
+                    display: block;
+                    text-align: left;
+                }
+                span{
+                    @include text-properties($roboto-light, #5a5b6b, em(13), 120%, null, null);
+                }
+                strong{
+                    @include text-properties($roboto, #5a5b6b, em(13), 100%, bold, null);
+                }
+            }
+            .cart-price{
+                display: inline-block;
+                margin-top: 12px;
+                padding-left: 0px;
+                padding-right: 14px;
+                float: right;
+                @media #{$no-mobile}{
+                    margin-top: 12px;
+                    padding-left: 0px;
+                }
+                strong{
+                    @include text-properties($roboto, #5a5b6b, em(13), 100%, bold, null);
+                    big{
+                        font-size: 16px;
+                    }
+                    span{
+                        display: inline-block;
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+        .link-despacho{
+            background-color: #f6f8fa;
+            display: block;
+            @include text-properties($roboto-light, #5a5b6b, em(13), 120%, null, null);
+            padding: 10px;
+            text-decoration: none;
+            @media #{$mobile}{
+                overflow: hidden;
+                text-align: left;
+                padding: 10px 20px;
+            }
+            .texto{
+                display: block;
+                float: left;
+                width: calc(100% - 20px);
+            }
+        }
+        .despacho{
+            form{
+                padding: 18px 0;
+            }
+            label{
+                display: table;
+                margin-bottom: 0;
+                width: 100%;
+                @media #{$no-mobile}{
+                    padding: 11px 20px 11px 0;
+                }
+                @media #{$mobile}{
+                    padding: 11px 20px;
+                }
+                &>*{
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                span{
+                    @include text-properties($roboto, #5a5b6b, em(13), 120%, bold, null);
+                    width: 96px;
+                    @media #{$mobile}{
+                        display: none;
+                    }
+                }
+                .styled-select{
+                    @media #{$no-mobile}{
+                        width: calc(100% - 96px);
+                    }
+                }
+            }
+        }
+    }    
+}

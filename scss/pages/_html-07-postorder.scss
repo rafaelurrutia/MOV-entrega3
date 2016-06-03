@@ -1,0 +1,143 @@
+.list-style-3.list-style-3-b {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+    li {
+        background-color: $blanco;
+        .col {
+            .MCSS-trash {
+                display: block;
+            }
+            .message {
+                display: none;
+            }
+            .cucarda-verde {
+                font-size: 13px !important;
+                &:before {
+                    border-color: transparent transparent transparent #F6F8FA;
+                }
+
+                @media #{$mobile} {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+
+                }
+            }
+
+        }
+
+        .col-1 {
+            width: 16%;
+            padding-left: 20px;
+            padding-right: 30px;
+
+        }
+        .col-3 {
+            width: 41%;
+            @media #{$mobile} {
+                padding-bottom: 35px;
+                p {
+                    text-align: left;
+                }
+
+            }
+            a {
+                position: absolute;
+                bottom: 20px;
+                left: 2%;
+                @media #{$mobile} {
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+
+                }
+            }
+            p {
+                padding-bottom: 20px;
+                @media #{$mobile} {
+                    padding-bottom: 0;
+                }
+            }
+
+        }
+        .col-4 {
+            width: 20%;
+            position: relative;
+
+
+        }
+        .col-5 {
+            width: 23%;
+            padding-left: 2%;
+
+        }
+        .col-6 {
+            display: none;
+            background: #F6F8FA;
+
+        }
+    }
+
+}
+.list-style-3.list-style-3-b {
+    li{
+        @media #{$tablet} {
+            .triangle-right-white{
+                &:before, &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+    li.added {
+        .col {
+            .message {
+                display: block;
+            }
+        }
+
+        .col-1 {
+            &:before,  &:after {
+                border-right-color:#139DC1;
+            }
+        }
+        .col-3 {
+
+        }
+        .col-4 {
+            width: 18%;
+        }
+        .col-5 {
+            width: 17%;
+
+        }
+        .col-6 {
+            width: 8%;
+            display: table-cell;
+            @media #{$mobile} {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.list-style-3.list-style-3-b {
+    li.hired {
+        .col {
+            .message {
+                display: block;
+            }
+        }
+
+        .col-1 {
+            &:before,  &:after {
+                border-right-color:#0177A1;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,862 @@
+.detalle-pref{
+	h2{
+		.svg{
+			fill: #005c84;
+		    width: 40px;
+		  	height: 24px;
+		    margin-right: 5px;
+		    display: inline-block;
+		   
+		    path{
+				stroke:#005c84;
+			}
+			@media (max-width: 480px){
+				position: absolute;
+		   		left: 24%;
+			}
+		}
+	}
+	.box-message-bottom{
+		background: #ecf0f6;
+		display: none;
+		padding: 15px 10px;
+		width: 100%;
+		@media #{$mobile}{
+		margin-bottom: 30px;
+			.boton-azul{
+				margin: 3px 0;
+				width: 100%;
+			}
+		}  
+	}	
+	.carac-plan{
+		.head{
+			height: 170px;
+			.svg{
+				height: 40px;
+				width: 40px;
+				 path{
+					fill:#fff;
+				}
+			}
+			@media #{$desktop-small}{
+				height: 205px;
+			}
+		}
+		.carac-detalle{
+			padding-top: 0;
+			vertical-align: middle;
+			p{
+				margin: 10px 0;
+			}
+			@media #{$mobile}{
+				padding: 20px 10px 20px 20px;
+			}
+		}
+	}
+	.cargar-mas.bg-white{
+		background: white;
+	}
+	
+	.editing{
+		
+		padding-right: 45px;
+		&.en-usos{
+	
+			display: none;
+			position: relative;
+    		top: -5px;
+    		span{
+    			padding-left: 35px;
+    		}
+    		i{
+    			color: #5c9bfa;
+    		    padding-left: 0;
+    			left: 0;
+    			top: -10px;
+    		}
+    		@media #{$mobile}{
+    			i{
+    				font-size: em(22);
+    			  	left: 20px;
+    				top: -13px;
+    			}	
+    		}
+   		}
+		i{
+			padding-right: 5px;
+		}
+		&.disabled i{
+			color: #cdd1da !important;
+		}
+		@media #{$mobile}{
+			padding-right: 0;
+		}
+	}
+	.info-importante{
+		background: none;
+		color: $text-grey-2;
+		font-size: em(13);
+		margin: 0;
+		padding-top: 0;
+		ul{
+			padding-left: 0;
+			li{
+				color: $text-grey-2;
+				margin-left: 15px;
+				&:before{
+					top: 1.11em;
+				}
+			}
+			&.list-inline{
+				border-bottom: 1px dotted #d7dae1;
+				margin-bottom: 0;
+				font-size: em(15);
+				padding:0 0 24px 14px;
+				li{
+					width: 31.5%;
+					span{
+						padding-left: 12px;
+					}
+					&:last-child{
+						text-align: right;
+						&:before {
+							left:29%;	
+							@media #{$desktop-small}{
+								left: 12%;
+							}
+							@media #{$tablet}{
+								left: 46%;
+							}				
+						}
+					}	
+				}
+			}
+			@media #{$desktop-small}{
+				&.list-inline{
+					padding-left: 0;
+					li{
+						width: 30%;
+						&:last-child:before {
+    						left: 5%;
+						}
+					}
+				}
+			}
+			@media #{$tablet}{
+				&.list-inline{
+
+					li{
+						margin-left: 0;
+						width: 31%;
+						span{
+							display: block;
+							padding-left: 0;
+						}
+						&:nth-child(even){
+							text-align: center;
+							&:before{
+								left: 2.4em;
+							}
+						}
+					}
+				}
+				
+			}
+		}
+		strong{
+			margin-left: 0;
+		}
+		.titulo{
+			@include text-properties($roboto, $text-grey-2, em(18), 100%, bold, null)
+		}
+		@media #{$tablet}{
+			padding-bottom: 0;
+		}
+		@media #{$mobile}{
+			padding: 0 0 20px;
+			strong{
+				margin-left: 0;
+				display: block;
+			}
+			ul{
+				margin-top: 10px;
+				li{
+					margin-left: 14px;
+					&:before{
+						left: -0.9em;
+					}
+				}
+				&.list-inline{
+					padding-left: 20px;
+					li{
+						margin-left: 0;
+						padding: 10px 0;
+						width: 100%;
+						&:last-child{
+							text-align:left;
+							&:before {
+								left:-0.9em;					
+							}
+						}	
+					}
+				}
+			}	
+		}
+	}
+
+	.nuevo-plan{
+		margin-bottom: 0;
+		padding: 24px 24px 20px;
+		@media #{$desktop}{
+			padding-left: 0;
+		}
+		@media #{$mobile}{
+			padding: 24px 20px 0;
+		}
+			
+		&.servicio{
+			color: #656d78;
+			float: left;
+			height: 290px;
+			margin: 20px 4px 40px;
+			width: 24.5%;
+			padding: 24px 20px;
+			@media #{$desktop-small}{
+				height: 320px;
+				width: 24.3%;
+			}
+			@media #{$tablet} {
+				width: 48.5%;
+				margin-bottom: 10px;
+				&:nth-child(even){
+					float: right;
+					margin-right: 0;
+				}
+				&:nth-child(odd){
+					margin-left: 0;
+				}
+				&:last-child{
+					float: left;
+				}
+			}
+			@media #{$mobile} {
+				padding-top: 40px;
+				position: relative;
+				width: 100%;
+				margin: 10px 0;
+			}
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				float: right;
+				margin-right: 0;
+			}
+			p{
+				@include text-properties($roboto-light, $text-grey-2, em(13), 1.8, null, null);
+				display: inline-block;
+				margin: 20px 0;
+				@media #{$desktop-small}{
+						height: 55px;
+				}
+				@media #{$mobile}{
+					height: 46px;
+					margin: 16px 0;
+				}
+			}
+			.btn-verde{
+				margin-top: 35px;
+				width: 100%;
+			}
+			.message-add{
+				border-top: 1px dashed #cdd2db;
+				text-align: center;
+				span{
+					display: block;
+					font-size: 11px;
+					&.only-desktop{
+						display: inline-block;
+						font-size: 13px;
+						vertical-align: middle;
+					}
+				}
+				i{
+					color: #a9cf38;
+					display: inline-block;
+					font-size: em(24);
+					vertical-align: sub;
+   					&.contratado{
+   						position: relative;
+   					   	bottom: 20px;
+    					left: 15px;
+   					}
+				
+				}
+				.MCSS-trash{
+					font-size: em(24);
+				}
+				@media #{$mobile}{
+					padding:  0;
+				}
+			}
+			.precio-plan{
+				text-align: center;
+				padding:16px 0 20px;
+				position: relative;
+				
+				&:before{
+					border-left: none;
+					width: 0;
+				}
+				.cucarda-verde{
+					font-size: em(13) !important;
+					left: -30px;
+					padding: 3px 8px 3px 16px;
+					position: absolute;
+					&:before {
+    					border-color: transparent transparent transparent #ECF0F6;
+					}
+
+				}
+				@media #{$desktop-small}{
+					.cucarda-verde{
+						left: -34px;
+					}
+				}
+				@media #{$tablet}{
+					padding-bottom: 10px;
+					.cucarda-verde{
+						 top: 0;
+					}
+				}
+				@media #{$mobile}{
+					.cucarda-verde{
+					   bottom: 246px;
+    					left: -25px
+					}
+				
+				}
+			}
+			&.add-servicio{
+				.btn-verde{
+					display: none;
+				}
+				.precio-plan{
+					padding-top: 0;
+				}
+				.message-add{
+					display: block;
+
+				}
+				@media #{$mobile}{
+					.cucarda-verde{
+						  bottom: 145px;
+					}
+				}
+
+			}
+		}
+		
+			
+	}
+
+	.num-pref{
+		background: #f7f7f9;
+		border-top: 1px solid #eef1f7;
+		display: none;
+		padding: 24px 0 10px;
+		position: relative;
+		@include text-properties($roboto-light, $text-grey-2, em(13), 1.6, null, null);
+		@media #{$mobile}{
+			padding: 24px 20px 0;
+		}
+		@media #{$tablet}{
+			padding: 24px;
+		}
+		p.sub-text{
+				margin-bottom: 16px;
+				@media #{$mobile}{
+					margin-bottom: 0;
+				}
+		}
+		&:after, &:before {
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&:after {
+			border-color: rgba(247, 247, 249, 0);
+			border-bottom-color: #f7f7f9;
+			border-width: 16px;
+			margin-left: -16px;
+		}
+		&:before {
+			border-color: rgba(238, 241, 247, 0);
+			border-bottom-color: #eef1f7;
+			border-width: 19px;
+			margin-left: -19px;
+		}
+		strong{
+			font-family: $roboto;
+		}
+		.form{
+			background: none;
+			padding: 0 0 10px;
+			i{
+				color: $azul-5a;
+				font-size: em(26);
+				margin-left: 16px;
+				vertical-align: middle;
+				&.MCSS-trash{
+					position: relative;
+					top: 5px;
+				}
+			}
+			input[type="text"]{
+				margin-top: 8px;
+				height: 50px;
+				width: 300px;
+			}
+
+			.btn-verde{
+				margin-top: 0;
+				width: 61%;
+			}
+			.del-content.disabled{
+				cursor: default;
+			    pointer-events: none;
+			    text-decoration: none;
+				i{
+					color: #cdd2db !important;
+				} 				
+			}
+			.field-title{
+				font-size: em(13);
+				height: auto;
+				left: 0;
+				position: relative;
+				text-align: left;
+				width: auto;
+			}
+			.error{
+				padding: 0;
+				margin: 0;
+			}
+			.mensaje-error{
+				text-align: left;
+				//top: 16px;
+				width: 77%;
+				padding-top: 8px;
+				padding-bottom: 8px;
+				@media #{$no-mobile}{
+					position: absolute;
+					bottom: 58px;
+				}
+				@media #{$tablet}{
+					bottom: 55px;
+				}
+				@media #{$desktop-small} {
+					padding: 8px 10px 8px 5px;
+					.close{
+						right: 8px;
+					}
+				}
+			}
+			.pull-right{
+				text-align: left;
+				.field-title, .mensaje-error{
+					@media #{$no-mobile}{
+						left: 40px;
+					}
+				}
+			} 
+			.prefijo{
+				padding-right: 5px;
+				position: relative;
+				top: 5px;
+				vertical-align: middle;
+			}
+			.row-group{
+				clear: both;
+			}
+			.row-form{
+				float: left;
+				width: 49%;
+				padding-top: 15px;
+
+			}
+			@media #{$desktop-small, $tablet} {
+				padding-right: 0;
+				padding-left: 0;
+				i{
+					margin-left: 8px;
+				}
+				input[type="text"]{
+					width: 218px;
+				}
+			}
+			@media #{$tablet}{
+				.btn-verde{
+					margin-top: 16px;
+				}
+				.mensaje-error{
+					width: 74%;
+				}
+				input[type="text"]{
+					width: 230px;
+				}
+			}
+			@media #{$mobile}{
+				i.MCSS-trash{
+					margin-left: 8px;
+				}
+				input[type="text"]{
+					width: 100%;
+				}
+
+				.btn-verde{
+					width: 100%;
+				}
+				.editing{
+					margin:10px 0 20px;
+					i{
+						margin-left: 0;
+					}
+				}
+				.field-title{
+					margin-bottom: 0;
+				}
+				#movil-pref{
+					width: 70%;
+				}
+				.mensaje-error{
+					width: 100%;
+					margin-bottom: 0;
+				}
+				.pull-right{
+					float: none;
+					text-align: left;
+					.field-title{
+						margin-top: 0;
+						left: 0;
+					}
+					input[type="text"]{
+						width: 70%;
+					}
+				}
+				.row-group{
+					border-top: 1px dotted #cdd1da;
+					float: left;
+					width: 100%;
+					padding: 20px 0;
+					&:first-child{
+						border-top: none;
+					}
+				}
+				.row-form{
+								
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.message-add{
+		display: none;
+	}
+	.pref-ingresados{
+		display: none;
+		
+		.editing{
+			padding-right: 0;
+			i{
+				color: #5c9bfa;
+				font-size: em(23);
+				position: relative;
+				vertical-align: super;
+			}
+			span{
+				padding-left: 5px;
+				vertical-align: text-bottom;
+			}
+			@media #{$tablet} {
+				i{
+					top: 4px;
+				}
+			}
+			@media #{$mobile}{
+				i{
+					padding: 0;
+				    left: 0;
+				    top: 5px;
+				}
+			}
+			&.en-usos{
+				display: none;
+			}
+		}
+		.info-importante{
+			@media #{$mobile} {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		&.add-nums{
+			display: block;
+		}
+	}
+	.precio-plan{
+		padding-top: 0;
+		text-align: left;
+		p, .thin-35{
+			margin-left: 20px;
+		}
+		
+		&:before{
+			left: -40px;
+		}
+		&.seguro{
+			.cucarda-verde{
+				display: block;
+				width: 65px;
+			}
+
+			&:before{
+				left: -80px;
+			}
+			@media #{$tablet}{
+				.cucarda-verde{
+					left: 66px;
+					top: 10px;
+				}
+			}
+			@media #{$mobile} {
+				margin-top: 20px;
+				.btn-verde{
+					margin-top: 20px; 
+				}
+				.cucarda-verde{
+				    left: 2px;
+    				bottom: 120px;
+				}
+			}
+			
+		}
+		@media #{$mobile}{
+			border: none;
+			text-align: center;
+			p, .thin-35{
+				margin-left: 0;
+				padding-left: 0;
+			}
+			.btn-verde{
+				width: 100%;
+			}
+		}
+		@media #{$tablet}{
+		border-top: none;	
+			text-align: center;
+			p, .thin-35{
+				padding:0 0 20px 0;
+			}
+			.btn-verde{
+				margin-top: 12px;
+			}
+		}
+		@media #{$desktop-small}{
+			&:before{
+				border: none;
+			}
+		}
+		@media #{$desktop-large, $tablet}{
+			.btn-verde{
+				width: 80%;
+			}
+		}
+	}
+	&.pref-added{
+
+		#add-carrito, .insert-num{
+			display: none;
+		}
+		.cucarda-verde{
+			display: none !important;
+		}
+		.editing.en-usos{
+			display: block;
+		}
+		.info-importante{
+			@media #{$tablet}{
+				padding-bottom: 20px;
+			}
+		}
+		.insert-num{
+			padding-bottom: 20px;
+		}
+		.nuevo-plan{
+			.btn-verde, .corregido{
+				display: none;
+			}
+			.message{
+				
+				display: block;
+			
+				p{
+					display: inline-block;
+					vertical-align: super;
+				}
+				
+				&.contratado{
+					padding-top: 0;
+					@media #{$desktop-large}{
+						padding-top: 41px;
+					}
+					@media #{$desktop-small}{
+						padding-top: 30px;
+					}
+					
+				}
+				@media #{$desktop-large}{
+					display: inline-block;
+					padding:32px 30px 0 0;
+					&.seguro{
+						padding-top: 33px;
+					}
+				
+				}
+
+			}
+			.message-add{
+				color: #656d78;
+				display: block;
+				.renov{
+					font-family: $roboto-light;
+					font-size: em(11);
+					display: block;
+					margin: 5px 0 10px;
+				}
+			}
+			.MCSS-check-o{
+				color: #a9cf38;
+				font-size: em(26);
+				display: inline-block;
+					&.en-usos {	
+						@media #{$mobile, $desktop-small, $tablet}{	
+							vertical-align: sub;		   											
+						    position: relative;
+						    bottom: 24px;
+    						left: 16px;
+						}    
+		   				
+					}
+				@media #{$desktop-large}{
+					display: block;
+					position: relative;
+						bottom: 10px;
+					
+				}
+				
+			}
+			.MCSS-trash{
+				display: inline-block;
+				font-size: em(26);
+				text-align: center;
+				padding:10px 0 0;
+
+				span{
+					font-size: 13px;
+					vertical-align: middle;
+				}
+
+				@media #{$desktop-large}{
+
+					&.seguro{
+						padding-top: 24px;
+					}
+					padding:33px 0 0 30px;
+					vertical-align:top;
+					span{
+						display: block;
+						padding-top: 10px;
+					}
+				}
+			}
+			.precio-plan{
+				padding-top: 60px;
+				text-align: right;
+				&:before{
+					top:-18px;
+					left: 40px;
+					height: 140px;
+					@media #{$desktop-small}{
+						border-left: 1px dotted #ccc; 
+			    		left: 10px;
+    					top: -20px;
+					}
+				}
+				&.seguro{
+					padding-top: 32px;
+					&:before{
+						top: -20px;
+						height: 130px;
+					}
+					@media #{$mobile, $tablet}{
+						margin-top: 10px;
+						padding-top:  0;
+					}
+				}
+				&.contratado{
+					padding-top: 60px				
+				}
+			}
+			@media #{$desktop}{
+				.message{
+					padding:41px 0 0;
+				}
+				.p-top{
+					padding-top: 20px;
+				}
+			}
+			@media #{$desktop-small}{
+				padding-right: 0;
+			}
+			@media #{$tablet}{
+				
+				.message-add{
+					border-top: 1px dotted #d7dae1;
+					margin: 20px 0 20px;
+					padding-top: 20px;
+				}
+				.precio-plan{
+					text-align: center;
+					padding-top: 20px;
+				}
+			}
+			@media #{$mobile}{
+				.message, .MCSS-trash{
+					padding: 5px 0 10px;
+					display: block;
+				}
+				.message-add{
+					border-top: 1px dotted #d7dae1;
+					padding-bottom: 20px;
+					padding-top: 20px;
+				}
+				
+				.precio-plan{
+					padding-top: 0; 
+					text-align: center;
+				}
+			}
+		}
+		
+	}
+}
+

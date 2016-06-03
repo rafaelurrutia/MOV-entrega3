@@ -1,0 +1,63 @@
+.container.e3-indisponibilidad {
+    max-width: 1200px;
+    margin-bottom: 45px;
+    h5 {
+        @include text-properties($roboto-bold, #007097, 17px, 100%, 300, null);
+        @media #{$mobile} {
+            font-size: 15px;
+        }
+    }
+    p {
+        @include text-properties($roboto-light, #78808A, 13px, 120%, 300, null);
+        @media #{$mobile} {
+            font-size: 14px;
+        }
+    }
+    p strong {
+        font-family: $roboto-bold;
+        color: #595A6B;
+    }
+
+    section.sub-container {
+        width: 100%;
+        max-width: 797px;
+        text-align: center;
+        padding: 50px 1% 45px 1%;
+        display: inline-block;
+        margin: 0 auto;
+        float: none;
+        background-color: white;
+        @media #{$mobile} {}
+        .disculpa-por-inconveniente {
+            width: 100%;
+            display: inline-block;
+            max-width: 592px;
+            background-color: #F0F4F4;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            float: none;
+            padding: 15px 1% 15px 1%;
+            @media #{$mobile} {}
+            .imagen {
+                display: inline-block;
+                vertical-align: top;
+                width: 50px;
+                padding: 25px 5px;
+                @media #{$mobile} {}
+                i {
+                    color: #FDB512;
+                    font-size: 35px;
+                    @media #{$mobile} {}
+                }
+            }
+            .texto {
+                display: inline-block;
+                vertical-align: top;
+                text-align: left;
+                width: calc(100% - 80px);
+                padding: 0 5%;
+                @media #{$mobile} {}
+            }
+        }
+    }
+}

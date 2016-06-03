@@ -1,0 +1,62 @@
+.caja-dialogo {
+    padding: 0px 3% 12px 0;
+    @media #{$mobile} {
+        padding-right: 1%;
+        padding-left: 1%;
+    }
+    .cont-modal-no_dejar_de_pagar_vencida {
+        max-width: 417px;
+        width: 100%;
+        display: inline-block;
+        padding: 47px 0 0 0;
+        @media #{$mobile} {
+            
+        }
+        h4 {
+            @include text-properties($roboto-bold, #015D85, 17.22px, 120%, 700, null);
+            margin-bottom: 0;
+            display: inline-block;
+            word-spacing: -1px;
+            margin-left: 40px;
+            margin-top: 14px;
+            @media #{$mobile} {
+                font-size: 16px;
+                text-align: center;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        .cont-border-bottom {
+            padding: 6px 0% 40px 0;
+            margin-left: 24px;
+            @media #{$mobile} {
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            p {
+                margin: 0;
+                padding: 0;
+                @include text-properties($roboto-light, #595A6B, 13px, 120%, 300, null);
+                @media #{$mobile} {
+                    font-size: 14px;
+                }
+            }
+        }
+        .btn-verde {
+            display: inline-block;
+            margin-top: 40px;
+            margin-left: 10px;
+            width: 220px;
+            &.close {
+                float: none !important;
+                text-shadow: 0;
+                opacity: 1 !important;
+            }
+            @media #{$mobile} {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,441 @@
+.steps-v3{
+    @media #{$mobile}{
+        padding: 0 10px;
+    }
+    .bordered {
+        border: 1px solid #ECF0F6 !important;
+    }
+    &.navbar-default{
+        background-color: #fff;
+        border: none;
+        border-radius: 0;
+        @include text-properties($roboto-light, $text-grey-2, em(13), null, normal, null);
+        .navbar-brand{
+            color: #676d77;
+            font-family: $roboto-bold;
+            font-size: em(16);  
+            padding-left: 24px;
+        }
+        .navbar-nav{
+            @media #{$no-mobile} {
+                width: 100%;
+                height: 45px;
+            }
+            li{
+                height:100%;
+                display:table;
+                @media #{$mobile} {
+                    display: block;
+                }
+                a{ 
+                    color: #656d78;
+                    font-family: $roboto;
+                    padding:0;
+                    display:table-cell;
+                    vertical-align:middle;
+                    @media #{$mobile} {
+                        padding: 10px 15px;
+
+                    }
+
+                    @media #{$no-mobile} {
+                        line-height:20px !important;
+
+                        span {
+                            width: 100%;
+                            display: block;
+                         //   border-right: 1px solid #CCC;
+                            line-height: 13px;
+                            padding-left:15px;
+                            padding-right:15px;
+                        }
+
+                    }
+                }
+
+                @media #{$no-mobile} {
+                    text-align: center;
+                }
+
+                &.active, &.visited{
+
+                    background-image: none;
+                    font-weight: 600;
+                    position: relative;
+                    a{
+
+                        color: #fff;
+                        background: none;
+
+                        &:hover{
+
+
+
+                        }
+                    }
+                &+li{
+                    background-image: none;
+                }
+                @media #{$no-mobile} {
+                    &:before{
+                        width: 0;
+                        height: 0;
+                        border-left: 12px solid transparent;
+                        border-right: 12px solid transparent;
+                        border-top: 9px solid #5D9EFF;
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -15px;
+                        bottom: -9px;
+                        z-index: 9;
+                    }
+                }
+            }
+            &.active {
+                 background-color: $text-azul-3;
+                 &:hover {
+                   background-color: $text-azul-3;
+                 }
+
+            }
+
+            &.visited{
+                background-color: #f7f7f9;
+                &:before{
+                    display: none;
+                }
+            }
+            @media #{$no-mobile}{
+                 &+li a span{
+                   background-image: url(../images/border-tabs.gif);
+                    background-position: center left;
+                    background-repeat: no-repeat;
+                }
+                &:first-child{
+                //    background-image: none;
+                }
+            }
+            &:hover{
+                background: #f7f7f9;
+            }
+
+        }
+
+    }
+        .navbar-toggle{
+            margin-right: 14px;
+            margin-top: 4px;
+            margin-bottom: 0px;
+            top:0;
+            .icon-bar{
+                background-color: #336699;
+            }
+            .caret-down:after{
+                color: #336699;
+                content: '\f0d7';
+                @include fa();
+                font-size: 18px;
+                top:27%;
+                right: -8%;
+                position: absolute;
+
+            }
+
+
+            &:hover, &:focus, &:visited {
+                background: #ffffff;
+            }
+         
+            &:not(.collapsed) .caret-down:after{
+                content: '\f0d8';
+            }
+
+        }
+    }
+
+        .navbar-collapse, .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+
+}
+
+.border-line{
+    color: $background-grey-9;
+    margin-bottom: 10px;
+    width: 98%;
+    
+    @media #{$mobile}{
+        margin-top: 0;
+        margin-bottom: 40px;
+         width: 90%;
+    }
+}
+.steps-v3-5 li {
+        @media #{$no-mobile} {
+            width: 20%;
+        }
+}
+.steps-v3-4 li {
+        @media #{$no-mobile} {
+            width: 25%;
+        }
+}
+.steps-v3-3 li {
+        @media #{$no-mobile} {
+            width: 33.33%;
+        }
+}
+
+.plan-adjust {
+    float:left;
+    width:100%;
+    h4 {
+        border-bottom:1px solid #ccc;
+        width: 100%;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    i.MCSS-check-o{
+        display: none;
+        color: #b3ce49;
+        font-size: 26px;
+        position: absolute;
+        left: 103%;
+        bottom: 30%;
+        @media #{$mobile} 
+        {
+            bottom: 20%;
+            left: 90%;   
+            font-size: 22px;    
+        }
+        @media #{$tablet}{
+            left: 95%;
+            bottom: 23%;
+        }
+    } 
+    
+
+    p.correcto{
+    	margin: 0;
+        color: #656d78 !important;
+    	@include text-properties($roboto-light, #656d78, em(13), em(24),normal , null);
+        @media #{$mobile}{
+            line-height: 1.6;
+        }
+
+    	strong{
+    		@include text-properties($roboto, null, null, null, bold , null);
+
+    		@media #{$mobile} {
+    			@include text-properties($roboto, null, null, null, bold , null);
+    		}
+    	}
+
+    	&.white{
+    		color: white;
+    	}
+
+    	&.grey-1{
+    		color: $text-grey-5;
+    	}
+    }
+
+    button {
+        &.btn-verde {
+            .confirm {
+                display: block;
+            }
+            .delete {
+                display: none;
+            }
+
+        }
+        &.boton-rojo {
+            .confirm {
+                display: none; 
+            }
+            .delete {
+                display: block;
+            }
+        }
+
+    }
+    form {
+        .field-title{
+            font-size: em(13);
+        }
+        .mensaje-error{
+            @media #{$mobile-y-tablet}{
+            width: 93%;
+        }
+    }
+       
+    }
+    input {
+        width: 94% ;
+        float: right;
+        position: relative; 
+
+        @media #{$tablet} {
+            width: 93% !important;
+           float: left;
+        }
+        @media #{$mobile} {
+          width: 81% !important;
+          float: left;
+          margin-left: 6%;
+        }
+
+    } 
+    .peso {
+       font-style: normal;
+        padding-right: 10px;
+        position: absolute;
+        bottom: 35%;
+        @media #{$mobile, $tablet} {
+            position: absolute;
+            top: 44px;
+            left: 0;
+            width: 7%;
+            text-align: left;
+            padding: 0;
+        }
+        @media #{$mobile} {
+            top:48px;
+        }
+        @media #{$desktop-small} {
+            padding-right: 24px;
+
+        }
+
+    }
+    .row-form {
+        width: 100%;
+        float: left;
+         .field-title {
+            @media #{$desktop-large}{
+                left: -290px ;
+                width: 270px ;
+            }
+            
+        }
+      
+        label {
+            @media #{$mobile} { 
+                width: 100% !important;
+            }
+        }
+    }
+     .styled-select{
+
+        @media #{$mobile}{
+            width: 87%;
+        }
+        @media #{$tablet}{
+            background-position: 97% 50%;
+            width: 93%;
+        }
+        
+    }
+}
+.secondary-adjusts {
+    padding:0;
+    li.secondary-adjust {
+        background: white;
+        list-style: none;
+        border: 1px solid #cdd2db;
+        padding: 13px 0px;
+        margin-bottom: 24px; 
+        .adjust-content{
+            padding: 0 20px;
+        }
+        input {
+            
+            @media #{$tablet} {
+              width:87% !important;
+              float: left; 
+              margin-left: 35px;
+            }
+            @media #{$desktop-small} {
+                float: left;
+                margin-left: 5%;
+                width: 84%;
+         
+            }
+
+        }
+        &:before {
+            color: #5E9EFF;
+            font-size: 12px;
+            left: 18px;
+            top: 16px;
+           @media #{$mobile} {
+                left: 8px;
+                top: 15px;
+            }
+        }
+        .show-info{
+            &:after {
+                content: "\f107";
+                font-size: 37px;
+                color: #CDD1DA;
+                font-family: "FontAwesome";
+                position: absolute;
+                right: 16px;
+                top: 12px;
+                @media #{$mobile}{
+                    font-size: 28px;
+                    right:4px;
+                    top: 2px;
+                }
+            }
+            &.chevron-active:after{
+                color: #5e9eff;
+                content: "\f106";
+            }
+            @media #{$mobile}{
+                margin-left: -4px;
+            }
+        }
+       
+        .detail {
+            padding-top: 20px;
+            padding-bottom: 30px;
+            display: none;
+        }
+
+    }
+    i.MCSS-check-o{
+        @media #{$tablet}{
+            left: 95%;
+        }
+        @media #{$desktop-small}{
+            left: 91%;
+        }
+    }
+    .peso{
+        padding-left: 20px; 
+        @media #{$mobile} {
+            padding-left: 0;
+            top: 62%;
+        }
+        @media #{$tablet}{
+            padding-left: 0;
+        }
+    } 
+    .styled-select{
+        @media #{$mobile}{
+            width: 88%;
+        }
+        @media #{$tablet} {
+            width: 93%;
+        }
+        @media #{$desktop-small} {
+            width: 89%;
+        }
+    }
+
+}

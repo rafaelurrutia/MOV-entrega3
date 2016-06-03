@@ -1,0 +1,140 @@
+//Primarios Azules
+//Azul 1 Movistar
+$azul-1a : #005c84;
+$azul-1b : #5995af;
+$azul-1c : #b2ceda;
+$azul-1d: #015d85;
+//Azul 2 Movistar
+$azul-2a : #0077a0;
+$azul-2b : #59a6c1;
+$azul-2c : #b2d6e2;
+
+//Azul 3 Movistar
+$azul-3a : #129dc0;
+$azul-3b : #65bfd6;
+$azul-3c : #b7e1ec;
+
+//Azul 4 Movistar
+$azul-4a : #00c6d7;
+$azul-4b : #59dae5;
+$azul-4c : #b2eef3;
+
+//Azul 4 Movistar
+$azul-5a : #5c9bfa;
+
+//Secundarios Verdes
+//Verde 1 Movistar
+$verde-1a : #238937;
+$verde-1b : #70b27d;
+$verde-1c : #bddbc3;
+$verde-1d : #a7ce37;
+
+//Verde 2 Movistar
+$verde-2a : #7ab800;
+$verde-2b : #a8d159;
+$verde-2c : #d7eab2;
+
+//Verde 3 Movistar
+$verde-3a : #a9cf38;
+$verde-3b : #c7e07d;
+$verde-3c : #e5f1c3;
+
+// Verde Alerta
+$verde-alert: #99cc00;
+
+//Verde Iconos
+$verde-ic : #91c52d;
+
+//Terciarios Realce
+//Purpura Movistar
+$purpura-a : #9e33b6;
+$purpura-b : #c07acf;
+$purpura-c : #e2c1e9;
+
+//Amarillo Movistar
+$amarillo-a : #fdb714;
+$amarillo-b : #fed066;
+$amarillo-c : #fee9b8;
+
+//Magenta Movistar
+$magenta-a : #ec008c;
+$magenta-b : #f359b4;
+$magenta-c : #f9b2dc;
+
+//Colores de Mensajes
+$warning  : #f25353;
+$blanco  : #ffffff;
+$sucess       : #{$verde-3a};
+
+//Grey Background Colors
+$background-grey-1: #f6f8fa;
+$background-grey-2: #f1f3f2;
+$background-grey-3: #f1f5f5;
+$background-grey-4: #dde8ea;
+$background-grey-5: #d3e1e4;
+$background-grey-6: #ecf0f6;
+$background-grey-7: #a6a6a6;
+$background-grey-8: #e0dfe0;
+$background-grey-9: #cdd2db;
+$background-grey-10: #f7f7f9;
+//Grey Border Colors
+$border-grey-1: #e8ecf2;
+
+// Gris Detalles
+$gris-detalle-1: #dfe6ec;
+
+//Colores de texto
+$text-grey-1 : #353b47;
+$text-grey-2 : #656d78;
+$text-grey-3 : #dfdfdf;
+$text-grey-4 : #8f909e;
+$text-grey-5 : #5a5b6b;
+$text-grey-6 : #767787;
+$text-grey-7:  #6a727c;
+$text-grey-8:  #5a5b6b;
+$text-grey-9:  #9a9a9b;
+
+$text-rojo-1 : #{$warning};
+$text-white  : #ffffff;
+$text-blue     : #10628a;
+
+$text-placeholder: #bcbfc3;
+
+//Titulos y Subtitulos
+$text-azul-1 : #005c84;
+$text-azul-2 : #{$azul-2a};
+$text-azul-3 : #5d9eff;
+
+//Links (enlaces)
+$blue-link-light : #5c9bfa;
+$blue-link-dark : #5cd2ed;
+
+// Fuentes
+
+$movistar-headline-bold: 'MovistarHeadlineBold';
+$movistar-headline-reg: 'MovistarHeadlineRegular';
+
+
+$roboto: 'Roboto';
+$roboto-light : 'RobotoLight';
+$roboto-thin  : 'RobotoThin';
+$roboto-bold : 'RobotoBold';
+
+$icons: 'Glyphicons Halflings';
+
+// MEDIA QUERIES
+
+$mobile: "(max-width: 767px)"; //xs
+
+$mobilelandscape: "(max-width: 767px) and (orientation: landscape)";
+
+$tablet: "(min-width: 768px) and (max-width: 991px)"; // sm
+$desktop-small: "(min-width: 992px) and (max-width: 1199px)"; // md
+$mobile-y-tablet: "(max-width: 991px)";
+$no-mobile: "(min-width: 768px)";
+$desktop: "(min-width: 992px)";
+$desktop-large: "(min-width: 1200px)"; //lg
+$phablet: "(min-width: 480px) and (max-width: 767px)"; // ph
+
+// UTILES
+$ruta_img    :     '../images/'

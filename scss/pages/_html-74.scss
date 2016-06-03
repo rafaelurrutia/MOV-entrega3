@@ -1,0 +1,56 @@
+.ppu.grafico-new{
+	ul{
+	    margin-top:18px;
+
+		li{
+		    margin-bottom: 14px;
+
+			&:nth-child(1) .square{
+				background: #005C84;
+			}
+
+			&:nth-child(2) .square{
+				background: #129DC0;
+			}
+
+			&:nth-child(3) .square{
+				background: #59DAE5;
+			}
+
+			&:nth-child(4) .square{
+				background: #65BFD6;
+			}
+
+			&:nth-child(5) .square{
+				background: #B7E1EC;
+			}
+
+		}
+	}
+
+}
+.grafico-new .total-graph {
+        width:100%;
+		p{
+			@include text-properties($roboto-light, #656d78, 13px, null, normal, null);
+
+			@media #{$mobile} {
+				@include text-properties($roboto-light, #656d78, 13px, null, normal, null);
+
+				border-bottom: 1px solid white;
+				padding-bottom: 12px;
+				margin: 0;
+			}
+
+			strong{
+				@include text-properties($roboto, #656d78, 13px, null, bold, null);
+
+				@media #{$mobile} {
+					@include text-properties($roboto, #656d78, 13px, null, bold, null);
+				}
+			}
+		}
+}
+.display-inline{
+	display: inline!important;
+}

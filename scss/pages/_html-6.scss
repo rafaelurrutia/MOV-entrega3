@@ -1,0 +1,206 @@
+.adicionales{
+	
+	p{
+		color: $text-grey-2;
+		font-family: $roboto-light;
+		&.nombre-plan{
+			font-family: $roboto;
+			padding-left: 10px;
+			small{
+				font-size: 85%;
+			}
+		}
+	}
+	h4{
+		font-family: $roboto; 
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	hr{
+		@media #{$mobile}{
+			margin: 0 0 10px;
+		}
+	}
+	strong{
+		font-family: $roboto; 
+	}
+
+	.garantia{
+		.panel-heading{
+			background-color: #ffffff;
+				@media #{$mobile} {
+					.precio{
+						margin-top: 10px;
+						padding-left: 25px;
+					small{
+						margin-right: 40px;
+					}
+				}
+			}	
+		}
+		
+	}
+	.panel{
+		border: 1px solid #e6e9ed;
+		box-shadow: none;
+
+		.panel-heading{
+			background-color: #f6f8fa;
+			border: none;
+			@media #{$mobile}{
+				.checkbox-movistar {
+					& label {
+						& input+span{
+							display:inline-block;
+							margin-top:15px;
+						}
+					}
+				}	
+			}
+			
+			.precio{
+				@include text-properties($roboto, $text-grey-2, 1.2em, 120%, bold);
+				float:right;
+				margin-top: 12px;
+				@media #{$mobile} {
+					float:none;
+					margin-top: 0;
+					padding-left: 40px;
+					small{
+						margin-right: 30px;
+					}
+				}
+				small{ 
+					font-size: 80%;
+				}
+			}
+		}
+
+		.panel-body{
+			border-top: 1px dashed #cdd1da;
+			display:none;
+
+			@media #{$mobile} {
+				padding: 20px 15px 0 15px; 
+			}
+
+			.policy-accept{
+				
+				@media #{$mobile} {
+					background: #ffffff;
+					border-top: dashed 1px #cdd1da;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					p{	
+						width: 65%;
+						vertical-align: top;
+					}
+			   	}
+			} 
+		}
+	}
+	
+	.vermas{
+		
+		margin-top: 6px;
+		min-height: 25px;
+		position: relative;;
+		text-align: center;
+		padding: 0 5px;
+		&:before{
+			content: ' ';
+		    position: absolute;
+		 	left: 4px;
+		    background:  $gris-detalle-1;
+		    width: 1px;
+		    height: 25px;
+		    @media #{$mobile}{
+		    	height: 32px;
+		    	top:5px;
+		    }
+				
+		}
+
+		@media #{$mobile} {
+			margin-top: 10px;
+			min-height: 35px;
+			min-width: 35px;
+		}
+		a{
+			color:$text-grey-2;
+			font-size: 13px;
+			font-weight: bold;
+			padding: 0 7px 2px 7px;
+				
+			&:link{
+				text-decoration: none;
+			}
+			&:focus{
+				outline: 0;
+			}
+			.mostrar{
+				@media #{$mobile} {
+					padding: 15px 0;
+				}	
+			}
+		}
+		
+	}	
+		.info-mostrar{
+		background: white;
+	}
+	.row{
+		margin: 0;
+	}
+	ul{
+	    list-style: none;
+	    margin-bottom: 30px;
+	    padding-left: 15px;
+	    @include text-properties($roboto-light, $text-grey-2, em(13), 1.6);
+		
+		@media #{$mobile}{
+			margin-bottom: 20px;
+		}
+	    li{
+	    	padding: 5px 0;
+	    }
+	}
+
+		.inicial{
+			li{
+				padding: 0;
+		  		&:before { 
+				    border-color: transparent $azul-5a;
+				    border-style: solid;
+				    border-width: 0.35em 0 0.35em 0.45em;
+				    content: "";
+				    display: block;
+				    height: 0;
+				    width: 0;
+				    left: -1em;
+				    top: 0.9em;
+				    position: relative;
+				}
+			}
+
+			p{
+				font-family: $roboto-light;
+				margin-left: 27px;
+			}
+		}
+		.radio-btn {
+			label {
+				margin-top: 8px; 
+				@media #{$mobile} {
+					margin-right: 0; 
+				}
+			}
+		}
+	
+
+	@media #{$no-mobile}{
+		.col-xs-2{
+			padding-right: 0;
+		}
+	}
+}

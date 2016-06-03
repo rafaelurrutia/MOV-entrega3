@@ -1,0 +1,367 @@
+
+.triangle-right-white {
+
+		@media #{$desktop-small, $desktop} {
+			@include flecha-h(#FFF ,#F6F8FA,$width : 25px);
+		}
+		@media #{$mobile, $tablet} {
+			@include flecha-v(#fff,#f6f8fa,25px);
+		}
+}
+
+/* Triangulo */
+.col-blue-arrow:before {
+      position:absolute;
+      height: 0;
+      top: 50%;
+      // transform:scaleY(-1);
+      max-width: 300%;
+      border-right: 220px solid #139DC1;
+      border-bottom: 1000px solid transparent;
+      content: "";
+      left: 93%;
+      border-radius:0;
+      margin-left: 10px;
+      -moz-transform: scaleX(-1) translateX(100%);
+      -webkit-transform: scaleX(-1) translateX(100%);
+      -ms-transform: scaleX(-1) translateX(100%);
+      transform: scaleX(-1) translateX(100%);
+
+}
+.col-blue-arrow:after {
+      position:absolute;
+      height: 0;
+      top: 50%;
+      -moz-transform:scaleY(-1) scaleX(-1) translateY(100%)     translateX(100%);
+      -webkit-transform:scaleY(-1) scaleX(-1) translateY(100%)     translateX(100%);
+      -ms-transform:scaleY(-1) scaleX(-1) translateY(100%)     translateX(100%);
+      transform:scaleY(-1) scaleX(-1) translateY(100%)     translateX(100%);
+      max-width: 300%;
+      border-radius:0;
+      border-right: 220px solid #139DC1;
+      border-bottom: 1000px solid transparent;
+      content: "";
+      left: 93%;
+      margin-left: 10px;
+}
+
+
+
+.list-style-3{
+    padding:0;
+    list-style:none;
+    .brief {
+        border:1px solid #ccc;
+        float: left;
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+    }
+    .box-message-bottom {
+        background-color:$background-grey-6;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        text-align: center;
+        display:none;
+        @media #{$mobile, $tablet} {
+            padding-top: 15px;
+
+        }
+        .MCSS-alerta_v2 {
+            &:before {
+                font-size: 24px;
+                color: #FCB714;
+                margin-right: 10px;
+                position: relative;
+                top: 6px;
+                @media #{$mobile, $tablet} {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+
+
+        }
+
+    }
+
+    li {
+        display:block;
+        float: left;
+        margin-bottom:24px;
+        width:100%;
+        &.not-added {
+            .in-added {
+                display: none;
+
+            }
+            .in-not-added {
+                display: inline-block;
+            }
+        }
+
+        a {
+            text-decoration:none;
+            cursor: pointer;
+        }
+            .col {
+            display: table-cell;
+            vertical-align:middle;
+            padding-top:25px;
+            padding-bottom:25px;
+                .message {
+                    display: block;
+                    i {
+                        font-size: 24px;
+                        color: $verde-3a;
+                        @media #{$mobile} {
+                            display: inline-block;
+                            margin-right: 5px;
+                            font-size: 18px;
+                            position: relative;
+                            top: 2px;
+
+                        }
+                    }
+                    p {
+                        padding-top: 4px;
+                        @media #{$mobile} {
+                            display: inline-block;
+
+                        }
+                    }
+
+                }
+                .MCSS-trash {
+                    text-align: center;
+                    margin-top: -14px;
+                    &:before {
+                        font-size: 24px;
+
+                    }
+                    span {
+                        display: block;
+                        padding-top: 10px;
+
+                    }
+                    @media #{$mobile} {
+                        &:before {
+                            font-size: 18px !important;
+                        }
+
+                    }
+
+                }
+            &.col-1 {
+                position: relative;
+                width:18%;
+                overflow:hidden;
+                text-align:center;
+        		@media #{$mobile} {
+                    &:before, &:after {
+                        display: none;
+                    }
+                    background-color:#0177A1;
+                    text-align: left;
+                    padding-left: 15px;
+                    padding-right: 15px;
+        		}
+                svg {
+                    fill:$blanco;
+                    width: 49px;
+                    height: 46px;
+                    @media #{$mobile} {
+                        width: 26px;
+                        height: 25px;
+                        display: inline-block;
+                        margin-right: 10px;
+                        position: relative;
+                        top: 2px;
+
+                    }
+                    &.napster {
+
+                    }
+                    &.family {
+                        path {
+                            stroke:$blanco;
+                        }
+
+                    }
+                    &.shield {
+
+                    }
+                    &.clouds {
+
+                    }
+
+                }
+                > * {
+                  z-index: 2;
+                  position: relative;
+                }
+                h4 {
+                    color: $blanco;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    @media #{$mobile} {
+                        display: inline-block;
+                        margin-top: 0;
+                        position: relative;
+                        top: -5px;
+                    }
+                }
+
+            }
+            &.col-2 {
+                width: 24%;
+                padding-left: 2%;
+                padding-right: 2%;
+                @media #{$mobile} {
+                    text-align: left;
+                }
+            }
+            &.col-3 {
+                width: 21%;
+                padding-left: 1%;
+                padding-right: 2%;
+                .price-plan {
+                    display: none;
+                }
+
+                > * {
+                  z-index: 2;
+                  position: relative;
+                }
+                .radios-holder {
+                    @media #{$mobile} {
+                        text-align: left;
+                    }
+                }
+
+            }
+            &.col-4 {
+                background-color:#F6F8FA;
+                padding-left:1%;
+                padding-right:1%;
+                width:20%;
+                text-align:center;
+                .message {
+                    display: none;
+                }
+                .price-plan {
+                    @media #{$mobile} {
+                        display: inline-block;
+                    }
+                }
+
+
+            }
+            .price {
+                small {
+                    font-size: 13px;
+                }
+
+            }
+            &.col-5 {
+                background-color:#F6F8FA;
+                padding-right: 2%;
+                width:21%;
+                text-align:center;
+
+                .MCSS-trash {
+                    display: none;
+                    @media #{$mobile} {
+                        &:before {
+                            font-size: 18px !important;
+                        }
+
+                    }
+
+                }
+            }
+            @media #{$mobile} {
+                width: 100% !important;
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                text-align: center;
+
+            }
+        }
+
+    }
+}
+
+
+.list-style-3{
+    float:left;
+    width:100%;
+    li.added {
+        .in-added {
+            display: inline-block;
+
+        }
+        .in-not-added {
+            display: none;
+        }
+        .col {
+
+            &.col-1 {
+                &:before, &:after {
+                    border-right-color: #0177a1;
+                }
+            }
+            &.col-2 {
+
+            }
+            &.col-3 {
+                .radios-holder {
+                    display: none;
+                }
+                .price-plan {
+                    display: block;
+                    @media #{$mobile} {
+                        display: inline-block;
+                     }
+                }
+
+
+            }
+            &.col-4 {
+                padding-right:0;
+
+                .message {
+                    display: block;
+                }
+
+
+                }
+
+            &.col-5 {
+                .MCSS-trash {
+                    display:block;
+                }
+                .btn-verde {
+                    display: none;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+.nav-sidebar-left {
+
+
+}

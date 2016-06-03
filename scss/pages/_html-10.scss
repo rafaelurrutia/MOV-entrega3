@@ -1,0 +1,87 @@
+.pasos-style-3 {
+    li {
+       width: 33.3%;
+    }
+}
+
+.bt_close {
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:10px;
+    right:0;
+    cursor:pointer;
+    z-index:3;
+     svg {
+        fill: $azul-5a;
+        float: left;
+        width: 19px;
+        height: 19px;
+    }
+}
+
+
+
+.mod-desplegable {
+    .bt-box-desplegable {
+        cursor: pointer;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .box-desplegable {
+        position: relative;
+        display:none;
+    }
+}
+
+.box-serie {
+    padding: 30px 10px 20px;
+    margin-bottom: 20px;
+    width:100%;
+    float:left;
+    background-color:#F6F8FA;
+    &:before {
+    content:"";
+	width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #F6F8FA;
+    position: absolute;
+    bottom: 100%;
+    right: 20px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h6 {
+        width: 100%;
+        float: left;
+        color: #656d7e;
+        font-size: 14px;
+        font-family: $roboto-light;
+    }
+    .left {
+        float: left;
+        width: 50%;
+        text-align: center;
+        @media #{$mobile}{
+            width: 100%;
+            margin-bottom: 20px;
+            }
+    }
+    .right {
+        float: right;
+        width: 50%;
+        text-align: center;
+        @media #{$mobile}{
+            width: 100%;
+            }
+
+    }
+}

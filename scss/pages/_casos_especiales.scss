@@ -1,0 +1,42 @@
+.box-border-top {
+    border-top: solid 1px #ecf0f5;
+    h3 {
+        margin: 50px 0 30px;
+    }
+    p.texto-espaciado {
+        line-height: 200%;
+        margin: 10px 0;
+    }
+}
+.icon-indicator {
+    float: left;
+    padding-top: 14px;
+    width: 100px;
+    img, svg {
+        fill: $verde-3a;
+        height: 30px;
+        vertical-align: middle;
+        width: 30px;
+    }
+    span {
+        color: $text-grey-5;
+        font-size: 1em;
+        font-weight: 300;
+        padding-left: 12px;
+    }
+    &+input {
+        width: calc(100% - 100px)!important;
+    }
+}
+.datafield-number {
+    img, svg {
+        fill: $verde-3a;
+        height: 30px;
+        margin-right: 10px;
+        vertical-align: middle;
+        width: 30px;
+    }
+    &+.datafield-number {
+        margin-top: 20px;
+    }
+}

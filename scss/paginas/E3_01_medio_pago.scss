@@ -1,0 +1,525 @@
+                .container.e3-medio-pago-orden {
+                    max-width: 1200px;
+                    margin-bottom: 45px;
+                    section.sub-container {
+                        width: 100%;
+                        max-width: 794px;
+                        text-align: center;
+                        @media #{$mobile} {
+                            //   background-color: white;
+                        }
+                    }
+                    .medio-pago {
+                        padding: 6% 12.5% 50px 12.5%;
+                        margin-top: -15px;
+                        @media #{$mobile} {
+                            padding: 27px 4.5% 50px 5.5%;
+                            width: 100%;
+                        }
+                        h5 {
+                            @include text-properties($roboto-light, #656D78, 16.86px, 100%, 400, null);
+                            display: inline-block;
+                            margin-left: 2px;
+                            text-align: left;
+                            width: 100%;
+                            @media #{$mobile} {
+                                font-size: 14px;
+                                text-align: center;
+                            }
+                        }
+                        ul.list-medio-pago {
+                            list-style-type: none;
+                            max-width: 997px;
+                            width: 100%;
+                            padding: 0;
+                            float: none;
+                            margin: 0 auto;
+                            margin-top: 10px;
+                            li {
+                                height: auto;
+                                min-height: 70px;
+                                border: 1px solid #ccc;
+                                margin-bottom: 12px;
+                                text-align: left;
+                                padding: 1% 1% 1% 5.7%;
+                                @include vendor-prefix(border-radius, 5px);
+                                @media #{$mobile} {
+                                    min-height: 50px;
+                                    margin-bottom: 18px;
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                                label {
+                                    display: block;
+                                    margin: 0;
+                                    padding: 18px;
+                                    box-sizing: border-box;
+                                    input[type="radio"] {}
+                                    cursor: pointer;
+                                }
+                                p {
+                                    @include text-properties($roboto-light, #656D78, 12.89px, 100%, 300, null);
+                                }
+                                div {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    @include text-properties($roboto, #656D78, 17px, 100%, 400, null);
+                                    input[type="radio"] {
+                                        display: none;
+                                    }
+                                    input[type="radio"]+label {
+                                        background: url('../pago/img/form-radiobutton.png') left center no-repeat;
+                                    }
+                                    input[type="radio"]:checked+label {
+                                        background: url('../pago/img/form-radiobutton-checked.png') left center no-repeat;
+                                    }
+                                }
+                                p {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                }
+                                &.webpay {
+                                    .s1 {
+                                        margin-top: 10px;
+                                        min-width: 36px;
+                                        width: 12%;
+                                        @media #{$mobile} {
+                                            //    margin-top: 2px;
+                                            margin-top: 7px;
+                                            width: 27px;
+                                            min-width: 27px;
+                                        }
+                                        @media (min-width: 0px) and (max-width: 343px) {
+                                            margin-top: 15px;
+                                        }
+                                    }
+                                    .s2 {
+                                        margin-top: 5px;
+                                        width: 34.6%;
+                                        min-width: 90px;
+                                        @media #{$mobile} {
+                                            width: 98px;
+                                            img {
+                                                width: 62px;
+                                            }
+                                        }
+                                        @media (min-width: 0px) and (max-width: 343px) {
+                                            margin-top: 15px;
+                                        }
+                                    }
+                                    .s3 {
+                                        margin-top: 22px;
+                                        width: 51%;
+                                        @media #{$mobile} {
+                                            font-size: 14px;
+                                            margin-top: 12px;
+                                            width: calc(100% - 135px);
+                                        }
+                                    }
+                                }
+                                &.servipag {
+                                    min-height: 74px;
+                                    @media #{$mobile} {
+                                        min-height: 50px;
+                                    }
+                                    .s1 {
+                                        margin-top: 10px;
+                                        min-width: 36px;
+                                        width: 11.5%;
+                                        @media #{$mobile} {
+                                            margin-top: 6px;
+                                            width: 27px;
+                                            min-width: 27px;
+                                        }
+                                        @media (min-width: 0px) and (max-width: 360px) {
+                                            margin-top: 15px;
+                                        }
+                                    }
+                                    .s2 {
+                                        margin-top: 11px;
+                                        width: 35%;
+                                        min-width: 90px;
+                                        @media #{$mobile} {
+                                            width: 98px;
+                                            //    margin-top: 8px;
+                                            margin-top: 11px;
+                                            img {
+                                                width: 83px;
+                                            }
+                                        }
+                                        @media (min-width: 0px) and (max-width: 360px) {
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                    .s3 {
+                                        // margin-top: 29px;
+                                        margin-top: 23px;
+                                        width: 51%;
+                                        //                        @media (min-width: 641px) and (max-width: 698px) {
+                                        //                            margin-top: 23px;
+                                        //                        }
+                                        @media #{$mobile} {
+                                            font-size: 14px;
+                                            margin-top: 15px;
+                                            width: calc(100% - 135px);
+                                        }
+                                    }
+                                }
+                                &.bci {
+                                    min-height: 72px;
+                                    @media #{$mobile} {
+                                        min-height: 50px;
+                                        margin-top: 0px;
+                                        margin-bottom: 18px;
+                                    }
+                                    .s1 {
+                                        margin-top: 10px;
+                                        min-width: 36px;
+                                        width: 14%;
+                                        @media #{$mobile} {
+                                            margin-top: 2px;
+                                            width: 27px;
+                                            min-width: 27px;
+                                        }
+                                    }
+                                    .s2 {
+                                        margin-top: 10px;
+                                        width: 32.5%;
+                                        min-width: 90px;
+                                        @media #{$mobile} {
+                                            width: 98px;
+                                            // margin-top: 14px;
+                                            margin-top: 10px;
+                                            img {
+                                                width: 52px;
+                                            }
+                                        }
+                                    }
+                                    .s3 {
+                                        margin-top: 26px;
+                                        @media #{$mobile} {
+                                            font-size: 14px;
+                                            //margin-top: 6px;
+                                            margin-top: 12px;
+                                            width: calc(100% - 135px);
+                                        }
+                                    }
+                                }
+                                &.bancoestado {
+                                    min-height: 72px;
+                                    margin-top: 15px;
+                                    margin-bottom: 32px;
+                                    @media #{$mobile} {
+                                        min-height: 50px;
+                                        margin-top: 0px;
+                                        margin-bottom: 18px;
+                                    }
+                                    .s1 {
+                                        margin-top: 12px;
+                                        min-width: 36px;
+                                        width: 13.5%;
+                                        @media #{$mobile} {
+                                            margin-top: 2px;
+                                            width: 27px;
+                                            min-width: 27px;
+                                        }
+                                    }
+                                    .s2 {
+                                        margin-top: 3px;
+                                        width: 33%;
+                                        min-width: 90px;
+                                        @media #{$mobile} {
+                                            width: 98px;
+                                            margin-top: 8px;
+                                            img {
+                                                width: 64px;
+                                            }
+                                        }
+                                    }
+                                    .s3 {
+                                        margin-top: 20px;
+                                        @media #{$mobile} {
+                                            font-size: 14px;
+                                            margin-top: 15px;
+                                            width: calc(100% - 135px);
+                                        }
+                                    }
+                                }
+                            }
+                            li.active {
+                                background-color: #E5F1C3;
+                                border: 1px solid #7AB800;
+                            }
+                            .s1 {
+                                //margin-right: 6%;
+                                margin-top: 10px;
+                                min-width: 36px;
+                                width: 12%;
+                            }
+                            .s2 {
+                                margin-top: 5px;
+                                // margin-right: 18.5%;
+                                width: 34.5%;
+                                min-width: 90px;
+                            }
+                            .s3 {
+                                margin-top: 22px;
+                            }
+                        }
+                    }
+                    h5.bottom {
+                        margin-top: -15px;
+                        padding-right: 30px;
+                        line-height: 25px;
+                    }
+                    .ticket-pago-presencial {
+                        background-color: #FFFFFF;
+                        height: auto;
+                        min-height: 70px;
+                        border-width: 1px;
+                        border-color: #ccc;
+                        border-style: solid;
+                        border-radius: 3px;
+                        margin-top: 5px;
+                        display: table;
+                        margin-bottom: 26px;
+                        width: 100%;
+                        @media #{$mobile} {
+                            min-height: 54px;
+                            margin-bottom: 33px;
+                        }
+                        p {
+                            @include text-properties($roboto-light,
+                            #676d77,
+                            12.89px,
+                            100%,
+                            300,
+                            null);
+                            @media #{$mobile} {
+                                font-size: 14px;
+                            }
+                        }
+                        .caja1 {
+                            background-color: #FFF;
+                            display: table-cell;
+                            vertical-align: top;
+                            width: 100%;
+                            padding: 0px 3.5% 0px 5.5%;
+                            label {
+                                display: block;
+                                margin: 0;
+                                padding: 18px;
+                                box-sizing: border-box;
+                                input[type="radio"] {}
+                                cursor: pointer;
+                            }
+                            div {
+                                input[type="radio"] {
+                                    display: none;
+                                }
+                                input[type="radio"]+label {
+                                    background: url('../pago/img/form-radiobutton.png') left center no-repeat;
+                                }
+                                input[type="radio"]:checked+label {
+                                    background: url('../pago/img/form-radiobutton-checked.png') left center no-repeat;
+                                }
+                            }
+                            .s1 {
+                                margin-top: 18px;
+                                min-width: 60px;
+                                width: 11.4%;
+                                float: left;
+                                @media #{$mobile} {
+                                    margin-top: 8px;
+                                    min-width: 30px;
+                                    width: 30px;
+                                }
+                            }
+                            .s2 {
+                                background-color: #FFF;
+                                margin-top: 8px;
+                                width: 12.62%;
+                                min-width: 66.75px;
+                                float: left;
+                                padding: 0;
+                                img {
+                                    float: left;
+                                }
+                                @media #{$mobile} {
+                                    margin-top: 4px;
+                                }
+                            }
+                            .s3 {
+                                margin-top: 31px;
+                                float: left;
+                                width: calc(100% - 140px);
+                                text-align: left;
+                                margin-left: 10px;
+                                @media #{$mobile} {
+                                    margin-top: 19px;
+                                    margin-left: 8px;
+                                    //new
+                                }
+                                @media (max-width: 385px) {
+                                    width: calc(100% - 105px);
+                                }
+                                &.js-active {
+                                    @media (max-width: 483px) {
+                                        display: block;
+                                        width: 100%;
+                                        margin-top: 15px !important;
+                                    }
+                                }
+                            }
+                        }
+                        .caja2 {
+                            background-color: #7AB800;
+                            display: none;
+                            vertical-align: top;
+                            width: 185px;
+                            text-align: left;
+                            padding: 14px 4% 0 5%;
+                            p {
+                                line-height: 15px;
+                            }
+                            &.triangle:before {
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 17px 17px 17px 0;
+                                border-color: transparent #7AB800 transparent transparent;
+                                position: absolute;
+                                top: 30%;
+                                left: -17px;
+                                display: block;
+                            }
+                        }
+                    }
+                    .ticket-pago-presencial.active {
+                        background-color: #A9CF38;
+                        border-color: rgb(122, 184, 0);
+                        border-style: solid;
+                        border-radius: 3px;
+                        p {
+                            @include text-properties($roboto-light,
+                            #FFFFFF,
+                            12.89px,
+                            100%,
+                            300,
+                            null);
+                            @media #{$mobile} {
+                                font-size: 14px;
+                            }
+                        }
+                        .caja1 {
+                            background-color: #A9CF38;
+                            display: table-cell;
+                            vertical-align: top;
+                            width: 405px;
+                            padding: 0px 3.5% 0px 5.5%;
+                            .s1 {
+                                margin-top: 20px;
+                                min-width: 60px;
+                                width: 11.4%;
+                                float: left;
+                            }
+                            .s2 {
+                                background-color: #A9CF38;
+                                margin-top: 8px;
+                                width: 12.62%;
+                                min-width: 66.75px;
+                                float: left;
+                                padding: 0;
+                                img {
+                                    float: left;
+                                    content: url("../pago/img/icon-ticket.png");
+                                }
+                            }
+                            .s3 {
+                                margin-top: 31px;
+                                float: left;
+                            }
+                        }
+                        .caja2 {
+                            background-color: #7AB800;
+                            display: table-cell;
+                            vertical-align: top;
+                            width: 185px;
+                            text-align: left;
+                            padding: 14px 4% 0 5%;
+                            p {
+                                line-height: 15px;
+                            }
+                            &.triangle:before {
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 17px 17px 17px 0;
+                                border-color: transparent #7AB800 transparent transparent;
+                                position: absolute;
+                                top: 30%;
+                                left: -17px;
+                                display: block;
+                            }
+                        }
+                    }
+                    .ticket-pago-presencial:hover {
+                        cursor: pointer;
+                    }
+                    .cont-link-boton {
+                        .volver {
+                            display: inline-block;
+                            float: left;
+                            margin-top: 16px;
+                            margin-left: 1px;
+                            a {
+                                padding-left: 20px;
+                            }
+                        }
+                        .pagar {
+                            width: 294px;
+                            width: 50%;
+                            @media #{$mobile} {
+                                width: 100%;
+                            }
+                            button {
+                                @media #{$mobile} {
+                                    position: relative;
+                                    &:after {
+                                        position: absolute;
+                                        content: "";
+                                        top: 49%;
+                                        right: 13px;
+                                        width: 5px;
+                                        height: 7px;
+                                        background-image: url("../pago/img/mobile/img-arrow-right-white.png");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .medio-de-pago {
+                        li {
+                            background-color: white;
+                            a {
+                                color: #656D78;
+                                position: relative;
+                                //                &:after {
+                                //                    display: block;
+                                //                    content: '';
+                                //                    position: absolute;
+                                //                    width: 32px;
+                                //                    height: 17px;
+                                //                    top: 36%;
+                                //                    right: 7.5%;
+                                //                    background-image: url("../pago/img/mobile/img-flecha-derecha-mobile.png");
+                                //                    background-repeat: no-repeat;
+                                //                    background-position: center;
+                                //                }
+                            }
+                        }
+                    }
+                }

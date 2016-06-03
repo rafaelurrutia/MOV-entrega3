@@ -1,0 +1,7 @@
+.svg-icon{
+	@include svg($verde-3a, 24px, 24px);
+	vertical-align: top;
+}
+.text-light{
+	font-family: $roboto-light !important;
+}

@@ -1,0 +1,80 @@
+.consumo-caja-gris{
+	@media #{$mobile}{
+		background-color: $background-grey-1;
+		padding: 34px 0;
+	}
+	.titulo-producto{
+		padding-top: 10px;
+		@media #{$mobile}{
+			h4{
+				padding-left: 0px!important;
+				text-align: center!important;
+				svg{
+					display: inline-block!important;
+					margin-right: 10px!important;
+					position: relative!important;
+					vertical-align: middle!important;
+				}
+			}
+		}
+	}
+ 
+}
+
+.consumo-2-col{
+	background-color: $background-grey-1;
+	@include text-properties($roboto-light, $text-grey-2, em(17), 120%, normal, null);
+	padding-bottom: 13px;
+	padding-top: 13px !important;
+
+	strong{
+		@include text-properties($roboto-bold, $text-grey-2, 21px, 120%, normal, null);
+	}
+
+	@media #{$mobile-y-tablet}{
+		margin-top: 18px;
+	}
+
+	&>div:first-child{
+		@media #{$no-mobile}{
+			border-right: solid 1px #cdd1da;
+		}
+		@media #{$mobile}{
+			strong{
+				font-size: 24px;
+			}
+			&+div{
+				font-size: 18px;
+				margin-top: 4px;
+				strong{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+}
+.text-gris{
+	@include text-properties($roboto-light !important, $text-grey-2 !important, inherit, 120%, normal, null);
+}
+.border-block-line{
+	.mensaje-desplegable{
+		background-color: #fafafa;
+		border: solid 1px #f1f5f5;
+		@include vendor-prefix(border-radius, 3px);
+	}
+}
+.saldo-actual{
+	@include text-properties($roboto-light, $text-grey-2, em(21), 120%, normal, null);
+	strong{
+		font-family: $roboto-bold;
+	}
+}
+.text-gris-light{
+	@include text-properties($roboto-light, $text-grey-2, em(13), 120%, normal, null);
+}
+hr.separador{
+	border-top: solid 1px #cdd1da;
+	margin-bottom: 0px;
+	margin-top: 24px;
+}

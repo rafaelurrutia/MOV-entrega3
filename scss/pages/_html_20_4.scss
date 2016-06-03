@@ -1,0 +1,291 @@
+.caja_blanca_padding_bottom_24{
+		background: white;
+		padding-bottom: 24px;
+	}
+.contenedor_reportar_perdida_o_robo_bloquear{
+	h2{
+		@include text-properties($movistar-headline-bold, #005c84, 24px,120%, normal, null);
+		margin-bottom: 14px;
+	}
+	.panel-default{
+		@media #{$mobile }{
+					margin-bottom: 48px;
+				}
+	}
+	
+		textarea{
+				margin-top: 22px;
+				line-height: 150%;	
+				
+		}
+
+textarea::-webkit-input-placeholder {
+	@include text-properties($roboto-light, $text-placeholder, 13px,null, normal, null);
+	line-height: 150%;
+}
+textarea:-moz-placeholder { 
+	@include text-properties($roboto-light, $text-placeholder, 13px,null, normal, null);
+		line-height: 150%;
+}
+textarea::-moz-placeholder {
+	@include text-properties($roboto-light, $text-placeholder, 13px,null, normal, null);
+		line-height: 150%;			
+}
+textarea:-ms-input-placeholder {
+	@include text-properties($roboto-light, $text-placeholder, 13px,null, normal, null);
+	line-height: 150%;			
+}	
+	
+	
+	.panel-heading{
+			strong{
+				@include text-properties($roboto, $text-grey-2, 13px,null, bold, null);
+			}
+		}
+		
+	.bajada{
+		text-align: center;
+		margin-bottom: 44px;
+		
+			@media #{$mobile}{
+				text-align: left;
+				margin-bottom: 48px;
+		}
+	}
+	
+	
+		
+	fieldset{
+		&:first-child{
+			@media #{$desktop-small }{
+					margin-bottom: 0px;
+				}
+				@media #{$mobile, $tablet }{
+					margin-bottom: 0px;
+					margin-top: 0px;
+				}
+		}
+		&:last-child{
+			margin-top: 35px;
+			margin-bottom: 0px;
+				@media #{$mobile, $tablet }{
+					margin-bottom: 0px;
+					margin-top: 0px;
+				}
+				@media #{$desktop-small }{
+					margin-top: 18px;
+				}
+			.instruccion_small{
+				@include text-properties($roboto, #656d78, 10px,null, light, null);
+				margin-top: 18px;
+			}
+
+		}
+			@media #{$mobile }{
+				margin-bottom: 18px;
+			}
+	
+		
+		
+		.panel_titulo{
+			@media #{$mobile }{
+				margin-bottom: 2px;
+			}
+		}
+		
+		.radio-btn{
+			@media #{$mobile , $tablet}{
+				margin-bottom: 24px;
+			}
+		}
+
+	
+		
+		.btn-azul{
+			width: 100%;
+			background: $text-azul-1;
+							
+				@media #{$mobile, $tablet }{
+					margin-top: 18px;
+					margin-bottom: 0px;
+				}
+		}
+	}
+	
+	.panel_titulo{
+		strong{
+			@include text-properties($roboto, $text-grey-2, 13px,null, bold, null);
+		}
+	}
+		legend{
+			@include text-properties($roboto, $text-grey-2, 13px,null, bold, null);
+			border: none;			
+		}
+		
+		ul{
+		padding-left: 15px;
+		margin-bottom: 48px;
+		li{
+			list-style: none;
+			margin-bottom: 5px;
+			@include text-properties($roboto, $text-grey-2, 13px,null, light, null);
+		}
+
+	
+	.contenedor_link{
+		margin-top: 48px;
+		margin-bottom: 42px;
+	}
+
+.panel{
+	@media #{$mobile}{
+		margin-bottom: 62px;
+	}
+}
+.panel-heading{
+	background: #f6f8fa;
+	padding: 18px 21px;
+	
+	strong{
+		@include text-properties($roboto, $text-grey-2, 13px,null, bold, null);
+	}
+}
+.panel-body {
+	padding: 18px 24px;
+	
+}
+
+form {
+	fieldset{
+		&:last-child{
+			margin-top: 35px;
+			margin-bottom: 0px;
+				@media #{$mobile, $tablet }{
+					margin-bottom: 0px;
+				}
+			.instruccion_small{
+				@include text-properties($roboto, #656d78, 10px,null, light, null);
+				margin-top: 18px;
+			}
+
+		}
+		margin-bottom: 32px;
+			@media #{$mobile }{
+				margin-bottom: 18px;
+			}
+	
+		
+		.panel-heading{
+			padding: 0px;
+		}
+		.panel_titulo{
+			@media #{$mobile }{
+				margin-bottom: 18px;
+			}
+		}
+		
+		.radio-btn{
+			@media #{$mobile , $tablet}{
+				margin-bottom: 24px;
+			}
+		}
+
+		textarea{
+				margin-top: 22px;
+				::-webkit-input-placeholder {
+					@include text-properties($roboto, $text-placeholder, 13px,null, light, null);
+				}
+				:-moz-placeholder { 
+					@include text-properties($roboto, $text-placeholder, 13px,null, light, null);
+				}
+				::-moz-placeholder {
+					@include text-properties($roboto, $text-placeholder, 13px,null, light, null);			
+				}
+				:-ms-input-placeholder {
+					@include text-properties($roboto, $text-placeholder, 13px,null, light, null);			
+				}	
+		}
+		
+		.btn-azul{
+			width: 100%;
+							
+				@media #{$mobile, $tablet }{
+					margin-top: 18px;
+					margin-bottom: 0px;
+				}
+		}
+	}
+}
+	
+
+	}
+	
+}
+
+
+.contenedor_reporte_perdida_error{
+	h3{
+		@include text-properties($roboto, null, 17px,null, bold, null);
+		margin-bottom: 14px;
+	}
+	.wrap-white{
+		padding-bottom: 0px;
+	}
+	.contenedor_mensaje{
+			p{
+			@include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+			margin: 0px;		
+			}	
+	}
+	
+	.contenedor_botton{
+		margin-top: 57px;
+		margin-bottom: 44px;
+	}
+	.link-simple-arrow-left{
+		@media#{$mobile}{
+			display: block;
+			width: 200px;
+			display: inline-block;
+			left: -15px;
+		}
+	}
+}
+
+.reportar_perdida_o_robo_exito{
+		h3{
+		@include text-properties($roboto, #007197, 17px,null, bold, null);
+		margin-bottom: 14px;
+	}
+	
+	.wrap-white{
+		padding-bottom: 0px;
+	}
+}
+
+.margin-top-55{
+	margin-top: 55px;
+}
+
+.margin-top-35{
+	margin-top: 35px;
+}
+
+.margin-bottom-15{
+	margin-bottom: 15px;
+}
+
+.margin-top-44 {
+	margin-top: 44px;	
+}
+.margin-bottom-42 {
+	margin-bottom: 42px;	
+}
+
+.margin-top-45{
+	margin-top: 45px;
+}
+
+.margin-bottom-23{
+	margin-bottom: 23px;
+}

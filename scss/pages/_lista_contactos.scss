@@ -1,0 +1,47 @@
+.lista-contactos{
+	border: 1px solid #cdd1da;
+	border-bottom: 0;
+	display: table;
+    list-style: none;
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    li{
+    	display: table-row;
+    	div, >span{
+    		border-bottom: 1px solid #cdd1da;
+    		display: table-cell;
+    		vertical-align: middle;
+    	}
+    	span{
+    		min-width: 60px;
+    	}
+    	div{
+    		padding: 15px;
+    		width: 84%;
+    		p{
+    			color: #353b47;
+    			font-size: 0.929em;
+    			font-weight: bold;
+    			line-height: 100%;
+    			margin: 0;
+    		}
+    		>span{
+    			color: #353b47;
+    			display: block;
+    			font-size: 1em;
+    			margin-top: 12px;
+    		}
+    	}
+    	.ico{
+    		display: block;
+		    fill: #91c52d;
+			height: 26px;
+			margin: 0 auto;
+			width: 26px;
+    	}
+    	.ico-disabled{
+			fill: #d3e1e4;
+    	}
+    }
+}

@@ -1,0 +1,597 @@
+.contenedor_banner_3_2 {
+	padding: 0px 10px;
+	
+		.banner-postorder {
+			 width: 100%;
+			margin: 0 auto;
+			
+			.carousel{
+				@media #{$desktop}{
+						padding: 0px;
+					}
+					.carousel-indicators{
+						@media #{$mobile}{
+							position: absolute;
+							bottom: 15px;	
+						}
+						@media #{$desktop-small}{
+							position: absolute;
+							bottom: 15px;	
+						}
+					}
+			}
+			
+			.item{
+				background: #f5f6f7;
+					@media #{$mobile}{
+						padding-bottom: 40px;
+			}
+			
+			.carousel-caption{
+				@media #{$tablet, $desktop-small}{
+					position: relative;
+					width: 100%;
+					padding: 24px 24px 90px 14px;
+					margin-left: -10px;
+				}
+			h3{
+				position: relative;
+				top: 33px;
+					@media #{$mobile}{
+						margin-bottom: 24px;
+						top: 0px;
+					}
+					@media #{$tablet, $desktop-small}{
+							top: 0px;
+					}
+			span{
+					font-size: 17px;
+					display: block;
+						@media #{$tablet, $desktop-small}{
+							display: inline;
+						}
+				}
+			}
+			
+			p.corregido.grey-1{
+				@media #{$desktop}{
+						position: relative;
+						top: 24px;
+						line-height: 170%;
+					}
+				@media #{$desktop-small}{
+						top: 0px;
+				}
+			span{			
+					@media #{$desktop}{
+						display: block;
+					}
+
+				}
+			}
+			
+			
+			.precio{
+				@media #{$desktop}{
+					position: relative;
+					top: 16px;
+					left:200px;
+				}			
+				@media #{$tablet ,$desktop-small}{
+					width: 100%;
+					margin-top: 0px;
+					position: relative;
+					top: 60px;
+				}
+				@media #{$phablet}{
+						position: relative;
+						top: 30px;
+						text-align: center;
+					}
+				@media #{$mobile}{
+					width: 100%;
+					margin-top: 0px;
+					position: relative;
+					top: 15px;
+				}
+				.block{
+					@media#{$tablet ,$desktop-small}{
+						position: relative;
+						top:-20px;
+					}
+					@media#{$mobile}{
+						position: relative;
+						top:0px;
+					}
+				}
+				.valor{
+					small{
+						font-size: 13px;
+					}
+					@media #{$desktop}{
+						position: relative;
+						top: 30px;
+						left: -70px;;
+					}		
+					@media #{$tablet}{
+						position: relative;
+						top: 15px;
+						left: 190px
+					}
+
+					@media #{$desktop-small}{
+						position: relative;
+						top:30px;
+						left: 115px;
+					}
+					
+					@media #{$phablet}{
+						position: relative;
+						top: 30px;
+						left: 190px;
+					}	
+
+					@media #{$mobile}{
+						position: relative;
+						top: 40px;
+						left: -10px;
+					}
+				}
+				.texto_auxiliar_1{
+					@media #{$desktop}{
+						position: relative;
+						top: -10px!important;
+						left: -27px;
+					}
+					@media #{$tablet}{
+						position: relative;
+						top: -25px;
+						left: 240px
+					}				
+					@media #{$desktop-small}{
+					    position: relative;
+					    top: -10px;
+					    left: 160px;
+					}	
+					@media #{$phablet}{
+						position: relative;
+						top: 0px;
+						left: 240px;
+					}	
+					@media #{$mobile}{
+						position: relative;
+						top: 0px;
+						left: 40px;
+					}	
+				
+				}
+				.texto_auxiliar_2{
+					@media #{$desktop}{
+						position: relative;
+						top: 30px!important;
+						left: -70px;
+					}	
+					@media #{$tablet}{
+						position: relative;
+						top: 15px;
+						left: 195px
+					}
+					@media #{$desktop-small}{
+						position: relative;
+						top: 30px;
+						left: 115px;
+					}	
+					@media #{$phablet}{
+						position: relative;
+						top: 37px;
+						left: -30px;
+					}		
+					@media #{$mobile}{
+						position: relative;
+						top: 10px;
+						left: 120px;
+					}					
+				}
+			}
+			.btn-verde{
+				@media #{$desktop}{
+					position: relative;
+					top: 25px;
+					left: -200px;
+				}
+				@media #{$tablet, $desktop-small}{
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+				@media #{$mobile}{
+					position: relative;
+					top: 28px;
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+			}
+			.link-simple{
+
+				@media #{$desktop}{
+					position: relative;
+					bottom: 110px;
+					left: -310px;
+				}
+				@media #{$mobile}{
+					position: absolute;
+					left: 0px;
+					bottom: 100px
+				}
+		
+								/* iPhone 4s  */
+				
+
+				
+				@media #{$tablet}{
+					position: relative;
+					top: -170px;
+					left: -230px
+				}
+				@media #{$desktop-small}{
+					position: relative;
+					top: -170px;
+					left: -550px;
+				}
+			}
+			
+			p.valor{
+					@media #{$desktop}{
+						position: relative;
+						top: 5px;
+					}
+				}		
+			}
+		}
+	}
+}
+
+
+.detalle_del_abonado_servicios_adicionales_despliegue{
+	@media#{$mobile}{
+	.steps-new{
+		ul.desktop{
+			border:none;
+				a{
+					font-size: 16px;
+					font-family: $roboto-light;
+					}
+					
+					li{
+							display: block;
+							border: 1px solid #D4D9E0;
+							margin-bottom: 10px;
+					}
+					
+					li.active{
+						display: block;
+					}
+					li.disabled{
+						display: none;
+					}				
+			}
+		}
+	}
+	@media#{$mobile}{
+	.steps-new{
+		margin-bottom: 34px;
+		ul.mobile{
+			border:none;
+				a{
+					font-size: 16px;
+					font-family: $roboto-light;
+					}
+					
+					li{
+							display: block;
+							border: 1px solid #D4D9E0;
+							margin-bottom: 10px;
+					}
+					
+					li.active{
+						display: block;
+					}
+					li.disabled{
+						display: none;
+					}				
+			}
+		}
+	
+	.wrap-white{
+			margin-top: 0px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-bottom: 34px;
+		}
+	}
+
+	
+	.contenedor_botones{
+		
+		.revisar_bolsas{
+			@media#{$mobile, $tablet, $desktop-small}{
+					margin-bottom: 34px;
+					top: 84px;
+					}
+				}
+				.revisar_consumo_bolsas{
+					margin-right: 42px;
+					@media#{$mobile, $tablet, $desktop-small}{
+					margin-right: 0;
+					position: relative;
+					top: -84px;
+					}
+				}
+		.boton-masinfo{
+			width: 268px!important;
+			float: right;
+	
+			@media#{$mobile, $tablet, $desktop-small}{
+				width: 100%!important;
+				float: none;
+
+				
+			}
+		}
+
+	.contenedor_primer_boton{
+		@media#{$mobile, $tablet, $desktop-small}{
+					margin-bottom: 70px;
+			}
+		}
+	}
+	.textos{
+	    display: table-cell;
+		vertical-align: middle;
+		padding-left: 20px;
+		text-align:left;
+				
+		@media#{$mobile, $tablet}{
+			padding-bottom: 48px;
+			text-align: left;
+		}
+		@media #{$mobile} {
+			padding-left: 0;
+		}
+		a{
+			@include text-properties($roboto, $blue-link-light, 13px,null, bold, null);
+		}
+	}
+	h4{
+		margin-bottom: 10px;
+		@include text-properties($roboto, $text-azul-1, 17px,null, bold, null);
+		margin-top: 0px;
+	}
+	p{
+		@include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+		margin-bottom: 0;
+	}
+	.caja_info{
+		margin: 24px 0px 48px 0px;
+		border: 1px $border-grey-1 solid;
+		height: 120px;
+		@media#{$mobile, $tablet, $desktop-small}{
+		    height: auto;
+		    overflow: hidden;
+		    margin-bottom: 34px;
+		}
+
+		.col-md-6{
+			padding: 0px;
+		}
+	.servicio{
+		background: $azul-1a;
+		
+		@media#{$desktop}{
+			@include flecha-h($azul-1a, $blanco,25px);	
+			display: table;
+			padding: 0px;
+			height: 118px;
+		}
+
+		@media#{$mobile, $tablet}{
+			&:before{
+				display: none;
+			}
+			&:after{
+				display: none;
+			}
+			background: $azul-2a;
+			height: auto;
+			padding:34px 24px 24px 24px;
+		}
+	
+		
+		.head{
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 32px;
+			@media#{$mobile}{
+				padding-left: 0px;
+				}
+
+			i{
+				font-size: 32px;
+				margin-right: 24px;	
+				color: $blanco;
+				vertical-align: middle;
+				display: table-cell;
+			}
+			
+			p{
+				@include text-properties($roboto, $blanco, 17px,null, bold, null);
+				line-height: 32px;
+				display: inline-block;
+				margin-bottom: 0px;
+				vertical-align: middle;
+				display: table-cell;
+				padding-left: 24px;
+				@media#{$mobile}{
+					padding-left: 14px;
+					line-height: 100%;
+				}
+
+			}		
+	}
+}
+
+
+	.info{
+	    height: 118px;
+		display: table;
+	    padding: 0px;
+
+	    	@media#{$mobile, $tablet}{
+			    justify-content: left!important;
+			    text-align: left!important;
+			    align-items: top!important; 
+				width: 100%;
+			    height: auto;
+			    padding: 24px 24px 0px 30px
+			}
+	    p{
+		    @include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+		    display: table-cell;
+			vertical-align: middle;
+			padding-left: 20px;
+			@media#{$mobile, $tablet}{
+				text-align: left;
+			}
+			@media #{$desktop-small}{
+				padding-left: 5px;
+			}
+		    @media #{$mobile} {
+		    	padding-left: 0;
+		    }
+		   strong{
+			  	@include text-properties($roboto, $text-grey-2, 13px,null, bold, null);
+ 
+		   }
+			@media#{$mobile, $tablet}{
+			 @include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+			}
+
+	    }
+		.validez{
+			display: table-cell;
+			vertical-align: middle;
+			
+			@include text-properties($roboto-thin, $text-grey-2, 13px,null, normal, null);
+			
+				padding-left: 0;
+			
+		}
+	}
+		
+	.caja_gris{
+		background: $background-grey-1;
+		height: 118px;
+		padding: 0px;
+		display: table;
+		text-align: left;
+		padding-left: 48px;	
+		@media#{$mobile, $tablet}{
+			width: 100%;
+			text-align: center;	
+			padding-left: 0px;		
+		}	
+	    .precio{
+		 	@include text-properties($roboto-thin, $text-grey-2, 39px,null, null, null);
+		 	display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			width: 100%;
+		   small{
+			   font-size: 13px;
+			   padding-bottom: 10px;
+			   display: block;
+			   @include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+			   
+	
+			   @media#{$mobile, $tablet ,$desktop-small}{
+		
+			   		display: block;
+			   		position: relative;
+			   		top: -5px;
+			   		@include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+			   	}	   
+		   } 
+		   span{
+		   		@include text-properties($roboto-light, $text-grey-2, 13px,null, normal, null);
+
+			   }
+		   }
+		}	
+	}	
+}
+
+.productos_y_servicios_contratados{
+	@media#{$mobile}{
+	.steps-new{
+		ul.desktop{
+			border:none;
+				a{
+					font-size: 16px;
+					font-family: $roboto-light;
+					}
+					
+					li{
+							display: block;
+							border: 1px solid #D4D9E0;
+							margin-bottom: 10px;
+					}
+					
+					li.active{
+						display: block;
+					}
+					li.disabled{
+						display: none;
+					}				
+			}
+		}
+	}
+	@media#{$mobile}{
+	.steps-new{
+		ul.mobile{
+			border:none;
+				a{
+					font-size: 16px;
+					font-family: $roboto-light;
+					}
+					
+					li{
+							display: block;
+							border: 1px solid #D4D9E0;
+							margin-bottom: 10px;
+					}
+					
+					li.active{
+						display: block;
+					}
+					li.disabled{
+						display: none;
+					}				
+			}
+		}
+	}
+	h3{
+		@include text-properties($roboto, #005d86 , 17px,null, bold, null);
+		margin-bottom: 14px;	
+	}
+	.notificacion-ico{
+		i{
+			font-size: 40px;
+			&:before{
+				color:#FDB714;
+			}
+		}
+	}
+	
+	
+}

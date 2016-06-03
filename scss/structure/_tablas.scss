@@ -1,0 +1,768 @@
+.tabla {
+	background:#fff;
+	width: 100%;
+
+	tr {
+
+		color:$text-grey-4;
+		
+	}
+
+	td {
+
+		border-bottom:2px solid $background-grey-1;
+		padding: 2em 1em;
+
+	}
+
+	tr:last-child td {
+
+		border-bottom:none;
+	}
+
+	thead {
+		background-color:$background-grey-1;
+		text-align:center;
+
+		td {
+			padding: 0;
+			font-family: "MovistarHeadline";
+			font-size: 1.286em;
+			font-weight: bold;
+			line-height: 120%;			
+			padding: 20px 10px;
+			color: $text-blue;
+		}
+
+		td:not(:last-child) {
+			border-right:2px solid #fff;
+		}
+	}
+
+	tbody {
+		line-height: 1.5em;
+
+		tr td:last-child {			
+			color:#5a5b6b;
+			font-size: 0.857em;
+			font-family: 'RobotoBlack';
+			padding-right:70px;
+			text-transform: uppercase;
+			white-space: nowrap;
+			position: relative;
+
+
+			.lupa {
+				position:absolute;
+				right:30px;				
+				fill:$verde-alert;
+				height: 25px;
+				width: 25px;
+			}
+
+			.cell-ver {
+				text-transform: capitalize;
+				display: none;
+			}
+
+			.flecha-cell-ver {
+				display: none;
+				color:$text-grey-4
+			}
+			
+		}
+		
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+ 
+ 	.tabla {   
+
+	    /* Force table to not be like tables anymore */
+		table, 
+		thead, 
+		tbody, 
+		th, 
+		td, 
+		tr { 
+			display: block; 
+		}
+
+		tbody {
+			background:$background-grey-6;
+			font-size: 0.9em;		
+			font-family: RobotoLight;
+			line-height: 1.5em;
+
+			tr td:last-child {
+				padding-right:10px;
+				.lupa {
+					position:initial;
+					right:30px;
+					width: 12px;
+					height: 12px;
+					margin-left: 10px;
+				}
+
+				.cell-ver {
+					text-transform: initial;
+					display: initial;
+				}
+
+
+				.flecha-cell-ver {
+					display: initial;
+					float:right;
+					width: 12px;
+				}
+
+				a {
+					color:$text-grey-5;
+					display: block;					
+				}
+			}
+		}
+
+		tr {
+			margin-bottom: 30px;
+
+			td:last-child {
+				border-bottom:none;
+			}
+		}
+
+	 
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr { 
+			left: -9999px;
+			position: absolute;
+			top: -9999px;
+		}
+	 
+		tr td:first-child { 
+			background-color:$background-grey-1;
+			font-family: Roboto;
+			font-weight: bold;	
+		}
+	 
+		td { 
+			/* Behave  like a "row" */		
+			
+			background:#fff;
+			padding:2em;
+			position: relative;
+			padding-left: 50%; 
+			text-align:left;
+			white-space: normal;
+		}
+	 
+		td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 12px;
+			left: 6px;
+			width: 45%;
+			padding: 1em;
+			
+			text-align:left;
+			
+		}
+	 
+		/*
+		Label the data
+		*/
+		td:before { 
+			content: attr(data-title); 
+		}
+
+	}
+}
+/** **/
+.centrar {
+	text-align:center;
+}
+
+
+.no-float{
+	float: none
+}
+
+.center-block{
+	@extend .no-float;
+} 
+.box-intro-tablas{
+	@media #{$desktop}{
+		background: url(../images/bg-1px-gris.gif) repeat-x center center;
+	}
+	.box-tablas{
+		background: #fff;
+		border: solid 1px #cdd1da;
+		padding: 17px 7px;
+		overflow: hidden;
+		@include vendor-prefix(border-radius, 4px);
+		.box-texto{
+			line-height: 179%;
+			p{
+				font-family: $roboto-light;
+				font-size: 13px;
+			}
+		}
+
+
+		.warning{
+			@include text-properties($roboto-light, $text-grey-4, 13px, 26px, normal, null);
+			padding: 6px 0;
+			margin: 0;
+			
+
+
+
+			span{
+
+				margin-top: -8px;
+				display: inline-block;
+				padding-left: 42px;
+				@include bg-img('ico-exclamacion.png', left, center, no-repeat, null);
+				line-height: 26px;
+				@media #{$mobile}{
+					@include bg-img('ico-exclamacion.png', left, 5px, no-repeat, null);
+					line-height: 120%;
+				}
+				strong{
+					font-family:$roboto;
+					@media #{$mobile}{
+						font-family: $roboto;
+						font-weight: bold;
+					}
+				}
+			}
+			&.warn-2{
+				@media #{$mobile}{
+					text-align: left;
+					span{
+						@include bg-img('ico-exclamacion.png', left, 7px, no-repeat, null);
+					}
+				}
+			}
+		}
+	}
+	@at-root{
+		.intro-title{
+			color: #6a727c;
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 16px;
+			letter-spacing: 0.45px;
+		}
+		.asignar-usuario{
+			text-align: left;
+			float: right;
+			width: 65%;
+			margin-top: 17px;
+			&:after{
+				float: right;
+			}
+			@media (max-width: 767px){
+				width: 100%;
+			}
+		}
+		.solicitud{
+			text-align: left;
+			width: auto;
+			padding-right: 20%;
+			position: relative;
+			&:after{
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+
+.tabla-excesiva{
+	
+	th{
+
+		span{
+			padding-left: 5px;
+			padding-right: 5px;
+			display: inline-block;			
+		}
+
+		&:first-child{
+			span{
+				border: none;
+			}
+		}
+		&.header{
+			span{
+				padding-right: 30px !important;
+			}
+		}
+	}
+
+	td{
+		padding: 20px 5px !important;
+	}
+
+	@media #{$desktop} {
+		margin-bottom: 24px;
+	}
+}
+.tabla-movistar{
+	width: 100%;
+	@include vendor-prefix(border-radius, 4px);
+	@media #{$desktop}{
+		border: solid 1px #f9f9f9;
+	}
+	&.sorted{
+		td{
+			text-align: center;
+			padding:  20px 10px;
+			vertical-align: top;
+			font-family:RobotoLight;
+
+
+			&>span{
+				//font-family: RobotoBold;
+
+				@include text-properties($roboto, null, null, null, bold, null);
+			}
+			&.text-justify{
+				text-align: justify!important;
+			}
+			a{
+				text-decoration: none;
+				@include text-properties($roboto, #5c9bfa, 13px, 30px, bold, null);
+			}
+			&.td-editable{
+				text-align: justify;
+				a{
+					@include text-properties($roboto, #5c9bfa, 13px, 30px, bold, null);
+
+					text-decoration: none;
+
+
+					@media #{$mobile}{
+						margin-top: -7px
+					}
+				}
+				@media #{$desktop}{
+					.ver-deta-lup{
+						margin-left: -40px;
+					}
+				}
+			}
+		}
+		tbody{
+			tr td:first-child{
+				//font-family:RobotoLight!important;
+				@media #{$mobile}{
+					//font-family: RobotoBold!important;
+				}
+			}
+		}
+	}
+	thead{
+		background-color: #0077a0;
+		th{
+			color: #fff;
+			font-size: 13px;
+			font-family: $roboto;
+			font-weight: bold;
+			text-align: center;
+			padding: 22.5px 0;
+			span{
+				display: inline-block;
+				width: 100%;
+				border-left: solid 1px #fff;
+				height: 23.5px;
+				vertical-align: middle;
+				text-align: center;
+				line-height: 24px;
+			}
+			&.header{
+				cursor: pointer;
+				@include bg-img('header-sorter.png', 86%, center, no-repeat);
+				&.headerSortDown{
+					@include bg-img('sort-down.png', 86%, center, no-repeat);
+				}
+				&.headerSortUp{
+					@include bg-img('sort-up.png', 86%, center, no-repeat);
+				}
+				&.bg-93pc{
+					background-position: 93% center !important;
+				}
+			}
+		}
+		.th-20{
+			width: 20%;
+		}
+		.th-16{
+			width: 16.66666666666667%;
+		}
+
+		.th-25{
+			width: 25%;
+		}
+	}
+	tbody{
+		tr:nth-child(2n){
+			@media #{$desktop}{
+				background-color: #f9f9f9
+			}
+		}
+		td:first-child+td, td:first-child+td+td,td:first-child+td+td+td{
+			border-left: solid 1px #f9f9f9
+		}
+		td{
+			font-family: Roboto;
+			font-size: 12px;
+			padding: 11px 0;
+			color: #656d78;
+			letter-spacing: 0.45px;
+		}
+		tr td:first-child{
+			//font-family: RobotoBold;
+			@include text-properties($roboto !important, null, null, null, bold, null);
+		}
+		@media #{$mobile-y-tablet}{
+			tr{
+				border: solid 1px #f9f9f9;
+				&+tr{
+					margin-bottom: 24px;
+				}
+
+				&+tr:last-child{
+					margin-bottom: 0;
+				}
+				td{
+					font-size: 1em;
+					vertical-align: middle;
+				}
+				td:first-child{
+					background-color: #0077a0;
+					color: #fff;
+					@include text-properties($roboto !important, white, null, null, bold, null);
+
+					&+td{
+						background-color: #d3e1e4;
+						&+td{
+							background-color: #fff;
+							&+td{
+								background-color: #f9f9f9;
+								&+td+td{
+									background-color: #f9f9f9;
+								}
+							}
+						}
+					}
+				}
+
+			}
+		}
+		.delete-row{
+			background-color: #ecf0f6!important;
+			@media #{$mobile-y-tablet}{
+				margin-top: -20px!important;
+			}
+			.delete-box{
+				padding: 30px 0;
+				position: relative;
+				background: transparent!important;
+				@media #{$mobile-y-tablet}{
+					padding-left: 30px!important;
+				}
+				img,svg{
+					width: 24px;
+					height: 25px;
+					fill: $verde-alert;
+					vertical-align: middle;
+					margin-right: 19px;
+
+					@media #{$mobile}{
+						vertical-align: top;
+					}
+				}
+				p{
+					font-weight: 300;
+					font-family: $roboto;
+					color: #656d78!important;
+					margin-bottom: 0;
+					font-size: 13px;
+					letter-spacing: 0;
+
+					span{
+						width: calc(100% - 60px);
+						display: inline-block;
+						word-break: normal;
+					}
+				}
+				.link{
+					text-align: center;
+					display: inline-block;
+					text-decoration: none;
+					color: #5c9bfa;
+					font-family: RobotoBold;
+					font-style: normal;
+					i{
+						margin-right: 15px;
+						font-size: 12px;
+					}
+				}
+				&:before{
+					content: '';
+					display: block;
+					width: 23px;
+					height: 11px;
+					background-image: url(../images/delete-row.png);
+					background-repeat: no-repeat;
+					top: -11px;
+					left: 10%;
+					position: absolute;
+				}
+				&.no-pointer{
+					&:before{
+						display: none
+					}
+				}
+			}
+		}
+		.ver-deta-lup{
+			width: 25px;
+			display: block;
+			@media #{$desktop}{
+				position: relative;
+				top: -3px;
+			}
+			@media #{$mobile-y-tablet}{
+				width: auto;
+				span{
+					padding-left: 0px;
+					font-family: RobotoLight;
+					color: #5a5b6b;
+				}
+				&+a{
+					margin-left: 50%;
+					position: relative;
+					top: 8px;
+					i{
+						margin-left: 10px;
+					}
+				}
+			}
+
+		}
+	}
+	.td-editable{
+		@media #{$desktop}{
+			padding-left: 0px!important;
+		}
+		@media #{$mobile-y-tablet}{
+			border-bottom: solid 1px #f9f9f9;
+			&:before{display: none}
+		}
+	}
+	.td-editable, .td-editable-2{
+		min-width: 15px;
+		padding-right: 4px;
+		@media #{$mobile-y-tablet}{
+			padding-left: 1.5em!important;
+			img, svg{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 9px;
+				width: 25px;
+			}
+			a{
+				color: #5a5b6b;
+				text-decoration: none;
+			}
+		}
+		img, svg{
+		  	max-width: 24px;
+		    height: 24px;
+		    fill: #9c0;
+		}
+	}
+}
+
+.content{
+	padding: 30px 10px 50px;
+}
+.row-content{
+	background-color: #FFF;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	@media #{$desktop}{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	@media #{$mobile-y-tablet}{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+.cargar-mas{
+	border: solid 1px #f9f9f9;
+	color: #5c9bfa;
+	text-align: center;
+	padding: 17px;
+	@include vendor-prefix(border-radius, 3px);
+	a{
+		text-decoration: none;
+		cursor: pointer;
+		font-size: 13px;
+		font-family: $roboto;
+		font-weight: bold;
+		i{
+			background-color: #5c9bfa;
+			color: #Fff;
+			padding: 3px;
+			font-size: 10px;
+			margin-right: 10px;
+		}
+		&:hover{
+			color: #5c9bfa;
+		}
+	}
+}
+.listado-mostrar{
+	text-align: center;
+	font-family: RobotoLight;
+	color: #8f909e;
+	font-size: 13px;
+	margin-top: 9px;
+}
+.titulo h2{
+	text-align: center;
+	margin-top: 19px;
+	margin-bottom: 16px;
+	font-size: 2em;
+}
+
+.tabla-prepago{
+
+	tr td:nth-child(2) {
+		@include text-properties($roboto !important, null, null, null, bold, null);
+	}
+}
+
+.tabla-movistar{
+	@media #{$mobile-y-tablet}{
+		table, 
+		thead, 
+		tbody, 
+		th, 
+		td, 
+		tr{
+			display: block;
+		}
+		tr td:last-child {
+			padding-right: 10px;
+		
+		}
+		td:last-child{
+			border-bottom: none;
+		
+		}
+		thead tr{
+			left: -9999px;
+			position: absolute;
+			top: -9999px;
+		}
+		td{
+			//padding: 2em!important;
+			position: relative!important;
+			padding-left: 50%!important;
+			text-align: left!important;
+			white-space: normal!important;
+			word-break: break-word!important;
+			&.no-pad-left-td{
+				padding-left: 20px!important;
+			}
+		}
+
+		td:before{
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 50%;
+			left: 6px;
+			 
+			@include vendor-prefix(transform, translateY(-50%));
+			width: 45%;
+			padding: 1em;
+			text-align: left;
+		}
+		td:before{
+			content: attr(data-title);
+		}
+	}
+	td.warning{
+		color: #e04857;
+		font-family: $roboto !important;
+		font-weight: bold;
+		&:before{
+			color: #656d78;
+			font-family: $roboto-light !important;
+			font-weight: 400;
+		}
+	}
+	td.bold{
+		font-family: $roboto !important;
+		font-weight: bold;
+	}
+	a.no-lh{
+		line-height: normal!important;
+	}
+}
+.button-movistar{
+	background-color: #005c84;
+	border: none;
+	padding: 16px 52px;
+	color: #fff;
+	@include vendor-prefix(border-radius, 5px);
+	font-family: Roboto;
+	font-size: 1em;
+}
+
+.filter-box{
+	border: solid 1px #e6e9ed!important;
+}
+
+@media #{$desktop}{
+	.no-padding-hr-xs, .tabla-holder{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.padding-hr-25{
+		padding: 0 25px;
+	}
+}
+
+
+@for $i from 1 through 9{
+	.tabla-#{$i}-col{
+		tr{
+			th.th-col{
+				width: #{100% / $i}
+			}
+		}
+	}
+}
+
+.link-download{
+	color: #5a5b6b;
+	font-family: $roboto-light;
+	font-weight: 400;
+	line-height: 26px;
+	margin-left: 18px;
+}

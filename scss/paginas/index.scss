@@ -1,0 +1,40 @@
+// GENERAL
+@import "_fuentes";
+@import "_banner_footer";
+@import "_steps-new";
+
+
+// PAGINAS ENTREGA 1
+//@import "01_detalle_pago_orden";
+//@import "01_medio_pago";
+//@import "02_detalle_pago_orden_pagado";
+//@import "03_comprobante_desktop_exito2";
+//@import "04_comprobante_desktop_fallido";
+//@import "05_comprobante_desktop_ticket";
+//@import "06_comprobante_pago_orden";
+//@import "07_historial_tickets_pago";
+
+
+// PAGINAS ENTREGA 2
+
+//@import "01_Detalle_cuentas_desktop";
+//@import "01_Detalle_cuentas_interaccion";
+//
+//// MODALES
+//@import "_bootstrap_modal_conf";
+//@import "_modal";
+//@import "_pago_automatico_modal";
+//@import "_no_dejar_de_pagar_vencida_modal";
+//@import "_desmarcar_servicios";
+//@import "_pago_diferenciado";
+//@import "_lineas_asociadas_a_la_cuenta";
+//@import "_detalle_de_servicios";
+
+
+// PAGINAS ENTREGA 3
+@import "E3_01_medio_pago";
+@import "E3_01b_medio_pago";
+@import "E3_02_version_imprimible_pago_existoso";
+@import "E3_03_version_imprimible_ticket";
+@import "E3_04_indisponibilidad";
+@import "pago_exitoso_imprimible";

@@ -1,0 +1,69 @@
+.radio-btn input[type=radio],
+.radio-btn input[type=checkbox] {
+	display: none;
+}
+
+.asignacion-usuario .tab-pane .radio-btn label{
+	font-weight: 400;
+	padding-left: 40px;
+	cursor: pointer;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 20px 0; 
+}
+
+.radio-btn label:before {
+	content: "";
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background-color: #fff;
+	border: 2px solid #66b7fc;
+	font-weight: 400;
+}
+
+.radio-btn label:before {
+	border-radius: 8px;
+}
+.radio-btn .checkbox label {
+	margin-bottom: 10px;
+}
+.radio-btn .checkbox label:before {
+    border-radius: 3px;
+}
+
+.radio-btn input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #66b7fc;
+    font-size:35px;
+    text-align:center;
+    padding-left:-1px;
+    line-height: 11px;
+}
+
+.radio-btn input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 15px;
+	color: #f3f3f3;
+	text-align: center;
+    line-height: 15px;
+}
+
+.asignacion-usuario .section-title{
+	border-top:none;
+}
+
+.border-top-dash{
+	border-top:1px dashed #e3e7ed;
+}
+
+@media only screen and (max-width: 767px) {
+	.caja-bajada{width: 100%;}
+} 

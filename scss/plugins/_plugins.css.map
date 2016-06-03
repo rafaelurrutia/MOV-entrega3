@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "_plugins.css",
+  "sources": [
+    "_plugins.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,OAAO,CAAC,sDAAmD",
+  "names": []
+}
